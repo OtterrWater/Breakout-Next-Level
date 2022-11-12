@@ -12,6 +12,7 @@ public class StartMenu : MonoBehaviour
         SceneManager.LoadScene("firstgame");
     }
 
+    //all below: within CogPanel
     public void openCog()
     {
         if (cogPanel != null)
