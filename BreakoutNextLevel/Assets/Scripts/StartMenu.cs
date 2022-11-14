@@ -7,9 +7,12 @@ using UnityEngine.UI;
 public class StartMenu : MonoBehaviour
 {
     public GameObject cogPanel;
+    public GameObject aboutPanel;
+    public GameObject howToPlayPanel;
+
     public void StartGame()
     {
-        SceneManager.LoadScene("firstgame");
+        SceneManager.LoadScene("LevelPicker");
     }
 
     //all below: within CogPanel
@@ -17,9 +20,23 @@ public class StartMenu : MonoBehaviour
     {
         if (cogPanel != null)
         {
-            bool isActive = cogPanel.activeSelf;
-            cogPanel.SetActive(!isActive);
+            bool cogActive = cogPanel.activeSelf;
+            cogPanel.SetActive(!cogActive);
         }
+    }
+
+    public void openAbout()
+    {
+        aboutPanel.SetActive(true);
+    }
+
+    public void openHowToPlay()
+    {
+        howToPlayPanel.SetActive(true);
+    }
+
+    public void backtoCog()
+    {
     }
 
     public void QuitGame()
@@ -27,4 +44,5 @@ public class StartMenu : MonoBehaviour
         Application.Quit();
         Debug.Log ("Button Quit activated");
     }
+
 }
