@@ -12,6 +12,11 @@ public class StartMenu : MonoBehaviour
         SceneManager.LoadScene("LevelPicker");
     }
 
+    public void OpenProfile()
+    {
+        SceneManager.LoadScene("CreateProfileMenu");
+    }
+
     //all below: within CogPanel
     public void openCog()
     {
