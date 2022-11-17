@@ -9,11 +9,11 @@ EditorBuildSettings:
     path: 
     guid: 00000000000000000000000000000000
   - enabled: 1
-    path: Assets/Scenes/MainMenu/MainMenu.unity
-    guid: 23267ed166dd1bb4480f088f15ad3069
-  - enabled: 1
     path: Assets/Scenes/Menus/CreateProfile/CreateProfileMenu.unity
     guid: 090433706d9265a48999af575d402829
+  - enabled: 1
+    path: Assets/Scenes/MainMenu/MainMenu.unity
+    guid: 23267ed166dd1bb4480f088f15ad3069
   - enabled: 1
     path: Assets/Scenes/shop/shop.unity
     guid: d11b17fa4f0138546a48ffef873f2fcb
