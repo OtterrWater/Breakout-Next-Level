@@ -17,6 +17,11 @@ public class StartMenu : MonoBehaviour
         SceneManager.LoadScene("CreateProfileMenu");
     }
 
+    public void OpenShop()
+    {
+        SceneManager.LoadScene("Shop");
+    }
+
     //all below: within CogPanel
     public void openCog()
     {
