@@ -5,6 +5,7 @@ using UnityEngine;
 public class paddleScript : MonoBehaviour
 {
     public float speed, leftScreenEdge, rightScreenEdge;
+    public GameManager gm;
 
     // Start is called before the first frame update
    
@@ -16,6 +17,15 @@ public class paddleScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (gm.gameOver)
+        {
+            return;
+        }
+        else if (gm.win)
+        {
+            return;
+        }
+
         float horizontal = Input.GetAxis("Horizontal");
 
         transform.Translate(Vector2.right * horizontal * Time.deltaTime * speed);
@@ -27,4 +37,6 @@ public class paddleScript : MonoBehaviour
             transform.position = new Vector2(rightScreenEdge, transform.position.y);
         }
     }
+
+
 }

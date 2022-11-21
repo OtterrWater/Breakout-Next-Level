@@ -7,6 +7,6 @@ public class LevelPicker : MonoBehaviour
 {
     public void levelone()
     {
-        SceneManager.LoadScene("firstgame");
+        SceneManager.LoadScene("levelone");
     }
 }
