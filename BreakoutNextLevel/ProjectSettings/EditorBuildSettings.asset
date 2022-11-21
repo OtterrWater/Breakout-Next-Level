@@ -21,6 +21,9 @@ EditorBuildSettings:
     path: Assets/Scenes/LevelPicker/LevelPicker.unity
     guid: 1d7b5e752cb17764b83e404c50a08697
   - enabled: 1
-    path: Assets/Scenes/LevelOne/firstgame.unity
+    path: Assets/Scenes/Levels/levelone.unity
     guid: ee68f5c95dfc40f4bb21d0b1331f0695
+  - enabled: 1
+    path: Assets/Scenes/Levels/leveltwo.unity
+    guid: 18c9151e893326c469c12dba9dc230de
   m_configObjects: {}

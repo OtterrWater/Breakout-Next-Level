@@ -8,6 +8,7 @@ public class ballScript : MonoBehaviour
     public bool inPlay;
     public Transform paddle;
     public float speed;
+    public GameManager gm;
 
     // Start is called before the first frame update
     void Start()
@@ -18,6 +19,16 @@ public class ballScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (gm.gameOver)
+        {
+            return;
+        } 
+        else if (gm.win)
+        {
+            rb.velocity = Vector2.zero;
+            inPlay = false;
+            return;
+        }
         if (!inPlay)
         {
             transform.position = paddle.position;
@@ -40,6 +51,20 @@ public class ballScript : MonoBehaviour
             Debug.Log("ball hit bottom of screen");
             rb.velocity = Vector2.zero;
             inPlay = false;
+
+            gm.UpdateLives(-1);
+        }
+    }
+
+    //kills bricks
+    void OnCollisionEnter2D(Collision2D other)
+    {
+        if (other.transform.CompareTag("brick"))
+        {
+            Destroy(other.gameObject);
+
+            gm.UpdateScore(+1);
+            gm.UpdateBrickCount();
         }
     }
 }

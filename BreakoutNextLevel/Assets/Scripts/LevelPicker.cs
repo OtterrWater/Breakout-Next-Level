@@ -5,8 +5,18 @@ using UnityEngine.SceneManagement;
 
 public class LevelPicker : MonoBehaviour
 {
+    public void home()
+    {
+        SceneManager.LoadScene("MainMenu");
+    }
+
     public void levelone()
     {
-        SceneManager.LoadScene("firstgame");
+        SceneManager.LoadScene("levelone");
+    }
+
+    public void leveltwo()
+    {
+        SceneManager.LoadScene("leveltwo");
     }
 }
