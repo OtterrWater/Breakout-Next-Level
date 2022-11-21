@@ -246,7 +246,7 @@ MonoBehaviour:
   rb: {fileID: 0}
   inPlay: 0
   paddle: {fileID: 1070642094}
-  speed: 500
+  speed: 575
   gm: {fileID: 1969984994}
 --- !u!58 &17374267
 CircleCollider2D:
@@ -2107,7 +2107,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: GiveUp
+  m_text: Give Up
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -3820,8 +3820,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: -0.000019073, y: -63.4}
-  m_SizeDelta: {x: 297.831, y: 75.36359}
+  m_AnchoredPosition: {x: 0.0020523, y: -78}
+  m_SizeDelta: {x: 438.7908, y: 102.6925}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1365516655
 MonoBehaviour:
@@ -3843,7 +3843,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Game Over
+  m_text: 'Better Luck
+
+    Next Time Loser'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -3876,7 +3878,7 @@ MonoBehaviour:
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
-  m_fontStyle: 5
+  m_fontStyle: 1
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 512
   m_textAlignment: 65535
@@ -4760,7 +4762,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.00003373, y: 97.619}
+  m_AnchoredPosition: {x: -0.00003373, y: 60}
   m_SizeDelta: {x: 227.0324, y: 52.6462}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1634520787
@@ -4904,7 +4906,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 371be86650d0fd4439f4299e2bc7630c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 10
+  speed: 11
   leftScreenEdge: -7.244709
   rightScreenEdge: 7.244709
   gm: {fileID: 1969984994}
