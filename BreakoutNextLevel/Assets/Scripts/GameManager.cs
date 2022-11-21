@@ -81,9 +81,9 @@ public class GameManager : MonoBehaviour
         FinalLevelScoreText.text = "Score: " + score;
     }
 
-    public void TryAgain()
+    public void GiveUp()
     {
-        SceneManager.LoadScene("levelone");
+        SceneManager.LoadScene("MainMenu");
     }
 
     public void Levelpicker()
@@ -91,8 +91,14 @@ public class GameManager : MonoBehaviour
         SceneManager.LoadScene("LevelPicker");
     }
 
-    public void GiveUp()
+    //levelScenes
+    public void levelone()
     {
-        SceneManager.LoadScene("MainMenu");
+        SceneManager.LoadScene("levelone");
+    }
+
+    public void leveltwo()
+    {
+        SceneManager.LoadScene("leveltwo");
     }
 }
