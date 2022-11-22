@@ -71,7 +71,7 @@ public class GameManager : MonoBehaviour
     {
         win = true;
         WinnerPanel.SetActive(true);
-        WinScoreText.text = "Score: " + score + "  Lives: " + lives + "\nTotal Score: " + score*lives;
+        WinScoreText.text = "Score: " + score + "  Lives: " + lives + "\nCoins: " + score*lives;
     }
 
     void GameOver()
