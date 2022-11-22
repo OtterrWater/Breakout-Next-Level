@@ -14,7 +14,7 @@ public class StartMenu : MonoBehaviour
 
     public void OpenProfile()
     {
-        SceneManager.LoadScene("CreateProfileMenu");
+        SceneManager.LoadScene("ProfileInfo");
     }
 
     public void OpenShop()
