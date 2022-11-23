@@ -22,6 +22,11 @@ public class StartMenu : MonoBehaviour
         SceneManager.LoadScene("Shop");
     }
 
+    public void Leaderboard()
+    {
+        SceneManager.LoadScene("LeaderBoard");
+    }
+
     //all below: within CogPanel
     public void openCog()
     {
