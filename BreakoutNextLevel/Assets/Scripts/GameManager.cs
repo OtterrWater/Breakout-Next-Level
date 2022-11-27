@@ -7,6 +7,7 @@ using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
+    public int coins;
     public GameObject[] hearts;
     public int lives;
     public int score;
@@ -72,6 +73,7 @@ public class GameManager : MonoBehaviour
         win = true;
         WinnerPanel.SetActive(true);
         WinScoreText.text = "Score: " + score + "  Lives: " + lives + "\nCoins: " + score*lives;
+        coins = score * lives;
     }
 
     void GameOver()
