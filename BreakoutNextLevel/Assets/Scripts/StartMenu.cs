@@ -39,6 +39,7 @@ public class StartMenu : MonoBehaviour
 
     public void QuitGame()
     {
+        PlayerPrefs.Save();
         Application.Quit();
         Debug.Log ("Button Quit activated");
     }

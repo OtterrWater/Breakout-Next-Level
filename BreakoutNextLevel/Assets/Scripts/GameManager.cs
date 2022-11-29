@@ -72,6 +72,7 @@ public class GameManager : MonoBehaviour
         win = true;
         WinnerPanel.SetActive(true);
         WinScoreText.text = "Score: " + score + "  Lives: " + lives + "\nCoins: " + score*lives;
+        PlayerPrefs.SetInt("SavedInteger", (score * lives));
     }
 
     void GameOver()
