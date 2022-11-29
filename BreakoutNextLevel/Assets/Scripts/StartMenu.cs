@@ -4,9 +4,10 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
-public class StartMenu : MonoBehaviour
+public class StartMenu : GameManager
 {
     public GameObject cogPanel;
+
     public void StartGame()
     {
         SceneManager.LoadScene("LevelPicker");
