@@ -6,6 +6,8 @@ public class SavePrefs : MonoBehaviour
 {
     
     public int coinsToSave;
+    public int skinsToSave;
+    public int levelsToSave;
 
     // Start is called before the first frame update
     void Start()
@@ -20,15 +22,19 @@ public class SavePrefs : MonoBehaviour
     }
     public void SaveGame()
     {
-        PlayerPrefs.SetInt("SavedInteger", coinsToSave);
+        PlayerPrefs.SetInt("SavedCoins", coinsToSave);
+        PlayerPrefs.SetInt("SavedSkins", skinsToSave);
+        PlayerPrefs.SetInt("SavedLevels", levelsToSave);
         PlayerPrefs.Save();
         Debug.Log("Game data saved!");
     }
     public void LoadGame()
     {
-        if (PlayerPrefs.HasKey("SavedInteger"))
+        if (PlayerPrefs.HasKey("SavedInteger")|| PlayerPrefs.HasKey("SavedSkins") || PlayerPrefs.HasKey("SavedLevels"))
         {
-            coinsToSave = PlayerPrefs.GetInt("SavedInteger");
+            coinsToSave = PlayerPrefs.GetInt("SavedCoins");
+            skinsToSave = PlayerPrefs.GetInt("SavedSkins");
+            levelsToSave = PlayerPrefs.GetInt("SavedLevels");
             Debug.Log("Game data loaded!");
         }
         else
