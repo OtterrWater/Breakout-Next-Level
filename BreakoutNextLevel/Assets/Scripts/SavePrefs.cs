@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+using TMPro;
 
 public class SavePrefs : MonoBehaviour
 {
@@ -8,6 +10,10 @@ public class SavePrefs : MonoBehaviour
     public int coinsToSave;
     public int skinsToSave;
     public int levelsToSave;
+    public string usernameToSave;
+    public TMP_InputField userInput;
+    public Button submitButton;
+
 
     // Start is called before the first frame update
     void Start()
@@ -19,6 +25,22 @@ public class SavePrefs : MonoBehaviour
     void Update()
     {
         
+    }
+
+    public void getInputOnClickHandler()
+    {
+        Debug.Log("your userName is: "+ userInput);
+    }
+
+    public void CreateUsername()
+    {
+        submitButton.onClick.AddListener(getInputOnClickHandler);
+        // GameObject inputFieldGo = GameObject.Find("UserCreation/UserInput");
+        //  InputField inputFieldCo = inputFieldGo.GetComponent<UserInput>();
+        // Debug.Log(UserInput.GetComponent<InputField>().text);
+        //Debug.Log(inputFieldCo.text);
+        // PlayerPrefs.SetString("SavedUsername", inputFieldCo.text);
+        Debug.Log("username saved!"+userInput.text);
     }
     public void SaveGame()
     {
@@ -32,6 +54,7 @@ public class SavePrefs : MonoBehaviour
     {
         if (PlayerPrefs.HasKey("SavedInteger")|| PlayerPrefs.HasKey("SavedSkins") || PlayerPrefs.HasKey("SavedLevels"))
         {
+            usernameToSave = PlayerPrefs.GetString("SavedUsername");
             coinsToSave = PlayerPrefs.GetInt("SavedCoins");
             skinsToSave = PlayerPrefs.GetInt("SavedSkins");
             levelsToSave = PlayerPrefs.GetInt("SavedLevels");
