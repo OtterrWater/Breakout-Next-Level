@@ -5,7 +5,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
-public class profileInfo : MonoBehaviour
+public class profileInfo : SavePrefs
 {
     public Text ProfileNameText;
     public Text CoinText;
@@ -13,8 +13,9 @@ public class profileInfo : MonoBehaviour
     public Text SkinText;
     void Start()
     {
+        LoadGame();
         ProfileNameText.text = "John Doe";
-        CoinText.text = "Coins: $00000";
+        CoinText.text = "Coins: "+ PlayerPrefs.GetInt("SavedInteger");
         LevelsCompletedText.text = "Levels Completed: 00000";
         SkinText.text = "Number of Skins: 00000";
     }

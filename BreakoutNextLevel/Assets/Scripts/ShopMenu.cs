@@ -10,11 +10,23 @@ public class ShopMenu : MonoBehaviour
     public Text moneyCntrText;
     void Start()
     {
-        moneyCntrText.text = "$00000";
+        moneyCntrText.text = "Coins: " + PlayerPrefs.GetInt("SavedInteger");
     }
     
     public void shoptomain()
     {
         SceneManager.LoadScene("MainMenu");
     }
+
+    public string purchaseSkin(string skinName)
+    {
+        //buy skin
+        //update skin counter
+        return "";
+    }
+    public string purchasePower(string powerName)
+    {
+        return "";
+    }
+
 }

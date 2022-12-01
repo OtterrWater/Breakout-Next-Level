@@ -18,6 +18,7 @@ public class GameManager : MonoBehaviour
     public GameObject gameOverPanel;
     public GameObject WinnerPanel;
     public int brickcountr;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -72,6 +73,7 @@ public class GameManager : MonoBehaviour
         win = true;
         WinnerPanel.SetActive(true);
         WinScoreText.text = "Score: " + score + "  Lives: " + lives + "\nCoins: " + score*lives;
+        PlayerPrefs.SetInt("SavedInteger", (score * lives) + PlayerPrefs.GetInt("SavedInteger"));
     }
 
     void GameOver()
