@@ -1,12 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.SceneManagement;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 
 public class SavePrefs : MonoBehaviour
 {
-    
+    public GameObject userNamePanel;
     public int coinsToSave;
     public int skinsToSave;
     public int levelsToSave;
@@ -31,16 +32,15 @@ public class SavePrefs : MonoBehaviour
     {
         Debug.Log("your userName is: "+ userInput);
     }
-
+    public void CloseUserNamePanel()
+    {
+        userNamePanel.SetActive(false);
+        Debug.Log("UserNamePanel Closed");
+    }
     public void CreateUsername()
     {
-        submitButton.onClick.AddListener(getInputOnClickHandler);
-        // GameObject inputFieldGo = GameObject.Find("UserCreation/UserInput");
-        //  InputField inputFieldCo = inputFieldGo.GetComponent<UserInput>();
-        // Debug.Log(UserInput.GetComponent<InputField>().text);
-        //Debug.Log(inputFieldCo.text);
-        // PlayerPrefs.SetString("SavedUsername", inputFieldCo.text);
-        Debug.Log("username saved!"+userInput.text);
+        PlayerPrefs.SetString("SavedUsername", userInput.text);
+        Debug.Log("username saved!"+userInput);
     }
     public void SaveGame()
     {
@@ -52,7 +52,7 @@ public class SavePrefs : MonoBehaviour
     }
     public void LoadGame()
     {
-        if (PlayerPrefs.HasKey("SavedInteger")|| PlayerPrefs.HasKey("SavedSkins") || PlayerPrefs.HasKey("SavedLevels"))
+        if (PlayerPrefs.HasKey("SavedInteger")|| PlayerPrefs.HasKey("SavedSkins") || PlayerPrefs.HasKey("SavedLevels")|| PlayerPrefs.HasKey("SavedUsername"))
         {
             usernameToSave = PlayerPrefs.GetString("SavedUsername");
             coinsToSave = PlayerPrefs.GetInt("SavedCoins");
