@@ -9,14 +9,12 @@ public class profileInfo : SavePrefs
 {
     public Text ProfileNameText;
     public Text CoinText;
-    public Text LevelsCompletedText;
     public Text SkinText;
     void Start()
     {
         LoadGame();
         ProfileNameText.text = "John Doe";
         CoinText.text = "Coins: "+ PlayerPrefs.GetInt("SavedInteger");
-        LevelsCompletedText.text = "Levels Completed: 00000";
         SkinText.text = "Number of Skins: 00000";
     }
 
