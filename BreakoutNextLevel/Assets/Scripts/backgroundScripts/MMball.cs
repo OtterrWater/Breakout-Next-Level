@@ -9,7 +9,7 @@ public class MMball : MonoBehaviour
     void Start()
     {
         MMrb = GetComponent<Rigidbody2D>();
-        MMrb.AddForce(Vector2.up * 500);
+        MMrb.AddForce(Vector2.up * 225);
         MMbc = GameObject.FindGameObjectsWithTag("brick").Length;
     }
 
@@ -18,8 +18,6 @@ public class MMball : MonoBehaviour
         if (other.transform.CompareTag("brick"))
         {
             Destroy(other.gameObject);
-
-            //gm.UpdateScore(+1);
             UpdateMMbc();
         }
     }
