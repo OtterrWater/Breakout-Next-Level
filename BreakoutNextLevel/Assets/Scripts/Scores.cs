@@ -3,16 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class Scores : MonoBehaviour
+public class LeaderBoard : MonoBehaviour
 {
-    void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.Escape))
-        {
-            SceneManager.LoadScene("MainMenu");
-        }
-    }
-
     public void goHome()
     {
         SceneManager.LoadScene("MainMenu");

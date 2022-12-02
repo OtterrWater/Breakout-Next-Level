@@ -18,7 +18,7 @@ EditorBuildSettings:
     path: Assets/Scenes/Profile Info/profileInfo.unity
     guid: 7f0688bade7bea845b795f662106f274
   - enabled: 1
-    path: Assets/Scenes/LeaderBoard/LeaderBoard.unity
+    path: Assets/Scenes/Scores/Scores.unity
     guid: 77609fe6eb0ee0340a685a34a46ac47a
   - enabled: 1
     path: Assets/Scenes/shop/shop.unity

@@ -19,6 +19,15 @@ public class profileInfo : SavePrefs
         LevelsCompletedText.text = "Levels Completed: 00000";
         SkinText.text = "Number of Skins: 00000";
     }
+
+    void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            SceneManager.LoadScene("MainMenu");
+        }
+    }
+
     public void goHome()
     {
         SceneManager.LoadScene("MainMenu");

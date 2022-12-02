@@ -5,6 +5,14 @@ using UnityEngine.SceneManagement;
 
 public class LevelPicker : MonoBehaviour
 {
+    void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            SceneManager.LoadScene("MainMenu");
+        }
+    }
+
     public void home()
     {
         SceneManager.LoadScene("MainMenu");

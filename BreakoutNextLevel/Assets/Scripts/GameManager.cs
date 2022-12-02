@@ -1,23 +1,20 @@
 using System.Collections;
 using System.Collections.Generic;
-using System.Globalization;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using System.Globalization;
 
 public class GameManager : MonoBehaviour
 {
     public GameObject[] hearts;
-    public int lives;
-    public int score;
-    public Text scoreText;
-    public Text FinalLevelScoreText;
-    public Text WinScoreText;
-    public bool gameOver;
-    public bool win;
-    public GameObject gameOverPanel;
-    public GameObject WinnerPanel;
-    public int brickcountr;
+    public GameObject gameOverPanel, WinnerPanel, PausePanel;
+    public int lives, score, brickcountr;
+    public Text scoreText, FinalLevelScoreText, WinScoreText;
+    public bool gameOver, win;
+
+    public static bool GamePaused = false;
+
 
     // Start is called before the first frame update
     void Start()
@@ -30,7 +27,21 @@ public class GameManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            if (GamePaused)
+            {
+                PausePanel.SetActive(false);
+                Time.timeScale = 1f;
+                GamePaused = false;
+            }
+            else
+            {
+                PausePanel.SetActive(true);
+                Time.timeScale = 0f;
+                GamePaused = true;
+            }
+        }
     }
 
     public void UpdateLives(int livesCountr)
