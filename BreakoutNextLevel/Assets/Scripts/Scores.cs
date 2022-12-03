@@ -2,9 +2,16 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
-public class LevelPicker : MonoBehaviour
+public class Scores : MonoBehaviour
 {
+    public Text LevelsCompletedText;
+    void Start()
+    {
+        LevelsCompletedText.text = "Levels Completed: 00000";
+    }
+    
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.Escape))
@@ -13,18 +20,8 @@ public class LevelPicker : MonoBehaviour
         }
     }
 
-    public void home()
+    public void goHome()
     {
         SceneManager.LoadScene("MainMenu");
-    }
-
-    public void levelone()
-    {
-        SceneManager.LoadScene("levelone");
-    }
-
-    public void leveltwo()
-    {
-        SceneManager.LoadScene("leveltwo");
     }
 }

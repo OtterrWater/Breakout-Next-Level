@@ -7,6 +7,27 @@ using UnityEngine.UI;
 public class StartMenu : MonoBehaviour
 {
     public GameObject cogPanel;
+
+    public static bool CogOn = false;
+    void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            if (CogOn)
+            {
+                cogPanel.SetActive(false);
+                Time.timeScale = 1f;
+                CogOn = false;
+            }
+            else
+            {
+                cogPanel.SetActive(true);
+                Time.timeScale = 0f;
+                CogOn = true;
+            }
+        }
+    }
+
     public void StartGame()
     {
         SceneManager.LoadScene("LevelPicker");
@@ -24,7 +45,7 @@ public class StartMenu : MonoBehaviour
 
     public void Leaderboard()
     {
-        SceneManager.LoadScene("LeaderBoard");
+        SceneManager.LoadScene("Scores");
     }
 
     //all below: within CogPanel
@@ -32,8 +53,18 @@ public class StartMenu : MonoBehaviour
     {
         if (cogPanel != null)
         {
-            bool cogActive = cogPanel.activeSelf;
-            cogPanel.SetActive(!cogActive);
+            if (CogOn)
+            {
+                cogPanel.SetActive(false);
+                Time.timeScale = 1f;
+                CogOn = false;
+            }
+            else
+            {
+                cogPanel.SetActive(true);
+                Time.timeScale = 0f;
+                CogOn = true;
+            }
         }
     }
 

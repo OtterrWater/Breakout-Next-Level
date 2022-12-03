@@ -12,7 +12,15 @@ public class ShopMenu : MonoBehaviour
     {
         moneyCntrText.text = "Coins: " + PlayerPrefs.GetInt("SavedInteger");
     }
-    
+
+    void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            SceneManager.LoadScene("MainMenu");
+        }
+    }
+
     public void shoptomain()
     {
         SceneManager.LoadScene("MainMenu");
