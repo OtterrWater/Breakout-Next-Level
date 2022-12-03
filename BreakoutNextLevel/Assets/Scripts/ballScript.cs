@@ -9,7 +9,7 @@ public class ballScript : MonoBehaviour
     public Transform paddle;
     public float speed;
     public GameManager gm;
-    public AudioSource ballImplact;
+    public AudioSource ballImplact1, ballImplact2;
 
     // Start is called before the first frame update
     void Start()
@@ -62,7 +62,8 @@ public class ballScript : MonoBehaviour
     {
         if (other.transform.CompareTag("brick"))
         {
-            ballImplact.Play();
+            ballImplact1.Play();
+            ballImplact2.Play();
             Destroy(other.gameObject);
 
             gm.UpdateScore(+1);

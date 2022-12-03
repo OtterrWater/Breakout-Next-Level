@@ -12,6 +12,7 @@ public class GameManager : MonoBehaviour
     public int lives, score, brickcountr;
     public Text scoreText, FinalLevelScoreText, WinScoreText;
     public bool gameOver, win;
+    public AudioSource loserSound1, loserSound2, winnerSound1, winnerSound2, loseHeartSound;
 
     public static bool GamePaused = false;
 
@@ -61,10 +62,12 @@ public class GameManager : MonoBehaviour
             GameOver();
         } else if (lives < 2)
         {
+            loseHeartSound.Play();
             Destroy(hearts[1].gameObject);
         }
         else if (lives < 3)
         {
+            loseHeartSound.Play();
             Destroy(hearts[2].gameObject);
         }
 
@@ -87,6 +90,8 @@ public class GameManager : MonoBehaviour
 
     void Winning()
     {
+        winnerSound1.Play();
+        winnerSound2.Play();
         win = true;
         WinnerPanel.SetActive(true);
         WinScoreText.text = "Score: " + score + "  Lives: " + lives + "\nCoins: " + score*lives;
@@ -95,6 +100,8 @@ public class GameManager : MonoBehaviour
 
     void GameOver()
     {
+        loserSound1.Play();
+        loserSound2.Play();
         gameOver = true;
         gameOverPanel.SetActive(true);
         FinalLevelScoreText.text = "Score: " + score;
