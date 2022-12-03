@@ -44,9 +44,10 @@ public class GameManager : MonoBehaviour
 
     public void Continue()
     {
-        PausePanel.SetActive(false);
-        Time.timeScale = 1f;
-        GamePaused = false;
+       PausePanel.SetActive(false);
+       Time.timeScale = 1f;
+       GamePaused = false;
+
     }
 
     public void UpdateLives(int livesCountr)
@@ -102,6 +103,8 @@ public class GameManager : MonoBehaviour
     public void GiveUp()
     {
         SceneManager.LoadScene("MainMenu");
+        Time.timeScale = 1f;
+        GamePaused = false;
     }
 
     public void Levelpicker()
