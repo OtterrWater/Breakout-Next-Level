@@ -5,8 +5,8 @@ using UnityEngine;
 public class ballScript : MonoBehaviour
 {
     public Rigidbody2D rb;
-    public bool inPlay;
-    public Transform paddle;
+    public bool inPlay, isCreated;
+    public Transform paddle, powerup;
     public float speed;
     public GameManager gm;
     public AudioSource ballImplact1, ballImplact2;
@@ -62,6 +62,13 @@ public class ballScript : MonoBehaviour
     {
         if (other.transform.CompareTag("brick"))
         {
+            int chance = Random.Range (1, 101);
+            if (chance < 50 && !isCreated)
+            {
+                Instantiate(powerup, other.transform.position, other.transform.rotation);
+                isCreated = true;
+            }
+
             ballImplact1.Play();
             ballImplact2.Play();
             Destroy(other.gameObject);

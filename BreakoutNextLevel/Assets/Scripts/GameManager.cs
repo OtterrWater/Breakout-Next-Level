@@ -10,9 +10,9 @@ public class GameManager : MonoBehaviour
     public GameObject[] hearts;
     public GameObject gameOverPanel, WinnerPanel, PausePanel;
     public int lives, score, brickcountr;
-    public Text scoreText, FinalLevelScoreText, WinScoreText;
+    public Text scoreText, FinalLevelScoreText, WinScoreText, addingLifeText;
     public bool gameOver, win;
-    public AudioSource loserSound1, loserSound2, winnerSound1, winnerSound2, loseHeartSound;
+    public AudioSource loserSound1, loserSound2, winnerSound1, winnerSound2, loseHeartSound, powerUpSound;
 
     public static bool GamePaused = false;
 
@@ -70,7 +70,21 @@ public class GameManager : MonoBehaviour
             loseHeartSound.Play();
             Destroy(hearts[2].gameObject);
         }
+        AddaLifePowerUp();
 
+    }
+    public void AddaLifePowerUp()
+    {
+        if (hearts.Length-1 < lives)
+        {
+            powerUpSound.Play();
+            addingLifeText.text = "+1";
+        }
+        else
+        {
+            loseHeartSound.Play();
+            addingLifeText.text = " ";
+        }
     }
 
     public void UpdateScore(int scoreCountr)
