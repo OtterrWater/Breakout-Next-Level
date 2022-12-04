@@ -21,15 +21,15 @@ EditorBuildSettings:
     path: Assets/Scenes/Menus/Scores.unity
     guid: 77609fe6eb0ee0340a685a34a46ac47a
   - enabled: 1
-    path: Assets/Scenes/Menus/shop.unity
-    guid: d11b17fa4f0138546a48ffef873f2fcb
-  - enabled: 1
     path: Assets/Scenes/Menus/LevelPicker.unity
     guid: 1d7b5e752cb17764b83e404c50a08697
   - enabled: 1
+    path: Assets/Scenes/Menus/shop.unity
+    guid: d11b17fa4f0138546a48ffef873f2fcb
+  - enabled: 1
     path: Assets/Scenes/Levels/levelone.unity
     guid: ee68f5c95dfc40f4bb21d0b1331f0695
-  - enabled: 1
-    path: Assets/Scenes/Levels/leveltwo.unity
-    guid: 18c9151e893326c469c12dba9dc230de
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
   m_configObjects: {}
