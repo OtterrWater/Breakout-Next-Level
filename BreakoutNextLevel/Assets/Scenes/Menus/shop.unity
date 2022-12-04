@@ -1085,6 +1085,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ab94a3d2b19ea524d8d78a96e1acb2e1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  skinInfo: {fileID: 11400000, guid: 44fc4172356131f4db30cc51b6149a97, type: 2}
+  buttonText: {fileID: 138932959}
+  skinImage: {fileID: 1183624322}
+  isSkinUnlocked: 0
 --- !u!1 &459130674
 GameObject:
   m_ObjectHideFlags: 0
@@ -2120,6 +2124,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ab94a3d2b19ea524d8d78a96e1acb2e1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  skinInfo: {fileID: 11400000, guid: cc82486f7dab2b34488dbb6466b7d84e, type: 2}
+  buttonText: {fileID: 718268909}
+  skinImage: {fileID: 1279121585}
+  isSkinUnlocked: 0
 --- !u!1 &770098529
 GameObject:
   m_ObjectHideFlags: 0
@@ -3534,6 +3542,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ab94a3d2b19ea524d8d78a96e1acb2e1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  skinInfo: {fileID: 11400000, guid: dcefa972291c442419239a394616c000, type: 2}
+  buttonText: {fileID: 1935019315}
+  skinImage: {fileID: 2043077032}
+  isSkinUnlocked: 0
 --- !u!1 &1279121583
 GameObject:
   m_ObjectHideFlags: 0
@@ -3709,6 +3721,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moneyCntrText: {fileID: 901873005}
+  coins: 0
 --- !u!82 &1314969809
 AudioSource:
   m_ObjectHideFlags: 0
@@ -4298,6 +4311,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 14dcb363eac109d4dbdb24bf7fe627f9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  allSkins:
+  - {fileID: 11400000, guid: cc82486f7dab2b34488dbb6466b7d84e, type: 2}
+  - {fileID: 11400000, guid: 44fc4172356131f4db30cc51b6149a97, type: 2}
+  - {fileID: 11400000, guid: dcefa972291c442419239a394616c000, type: 2}
+  - {fileID: 11400000, guid: 4c8d727a9f05eea41a08520b0fc1335f, type: 2}
+  - {fileID: 11400000, guid: dac82a81dda7cac468a6e26e69b060f9, type: 2}
 --- !u!1 &1621479325
 GameObject:
   m_ObjectHideFlags: 0
@@ -4465,6 +4484,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ab94a3d2b19ea524d8d78a96e1acb2e1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  skinInfo: {fileID: 11400000, guid: dac82a81dda7cac468a6e26e69b060f9, type: 2}
+  buttonText: {fileID: 166202818}
+  skinImage: {fileID: 210408705}
+  isSkinUnlocked: 0
 --- !u!1 &1702200280
 GameObject:
   m_ObjectHideFlags: 0
@@ -5034,6 +5057,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ab94a3d2b19ea524d8d78a96e1acb2e1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  skinInfo: {fileID: 11400000, guid: 4c8d727a9f05eea41a08520b0fc1335f, type: 2}
+  buttonText: {fileID: 1100217451}
+  skinImage: {fileID: 779372717}
+  isSkinUnlocked: 0
 --- !u!1 &1935019313
 GameObject:
   m_ObjectHideFlags: 0

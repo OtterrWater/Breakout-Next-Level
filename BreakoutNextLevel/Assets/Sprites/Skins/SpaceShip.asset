@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dda8482c9fc9085448de5030f53832ac, type: 3}
   m_Name: SpaceShip
   m_EditorClassIdentifier: 
-  skinID: 0
-  skinSprite: {fileID: 0}
-  skinPrice: 0
+  skinID: 3
+  skinSprite: {fileID: 21300000, guid: 8cbd2d7c864dfe6488325bd6aff573e9, type: 3}
+  skinPrice: 10
