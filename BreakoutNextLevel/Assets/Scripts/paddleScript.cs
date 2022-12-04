@@ -8,10 +8,10 @@ public class paddleScript : MonoBehaviour
     public GameManager gm;
 
     // Start is called before the first frame update
-   
+
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
@@ -33,10 +33,18 @@ public class paddleScript : MonoBehaviour
         {
             transform.position = new Vector2(leftScreenEdge, transform.position.y);
         }
-        if (transform.position.x > rightScreenEdge){
+        if (transform.position.x > rightScreenEdge)
+        {
             transform.position = new Vector2(rightScreenEdge, transform.position.y);
         }
     }
 
-
+    void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.CompareTag("extraLife"))
+        {
+            gm.UpdateLives(1);
+            Destroy(other.gameObject);
+        }
+    }
 }

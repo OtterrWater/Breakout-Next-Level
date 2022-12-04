@@ -10,8 +10,9 @@ public class GameManager : MonoBehaviour
     public GameObject[] hearts;
     public GameObject gameOverPanel, WinnerPanel, PausePanel;
     public int lives, score, brickcountr;
-    public Text scoreText, FinalLevelScoreText, WinScoreText;
+    public Text scoreText, FinalLevelScoreText, WinScoreText, addingLifeText;
     public bool gameOver, win;
+    public AudioSource loserSound1, loserSound2, winnerSound1, winnerSound2, loseHeartSound, powerUpSound;
 
     public static bool GamePaused = false;
 
@@ -31,9 +32,7 @@ public class GameManager : MonoBehaviour
         {
             if (GamePaused)
             {
-                PausePanel.SetActive(false);
-                Time.timeScale = 1f;
-                GamePaused = false;
+                Continue();
             }
             else
             {
@@ -42,6 +41,14 @@ public class GameManager : MonoBehaviour
                 GamePaused = true;
             }
         }
+    }
+
+    public void Continue()
+    {
+       PausePanel.SetActive(false);
+       Time.timeScale = 1f;
+       GamePaused = false;
+
     }
 
     public void UpdateLives(int livesCountr)
@@ -55,13 +62,29 @@ public class GameManager : MonoBehaviour
             GameOver();
         } else if (lives < 2)
         {
+            loseHeartSound.Play();
             Destroy(hearts[1].gameObject);
         }
         else if (lives < 3)
         {
+            loseHeartSound.Play();
             Destroy(hearts[2].gameObject);
         }
+        AddaLifePowerUp();
 
+    }
+    public void AddaLifePowerUp()
+    {
+        if (hearts.Length-1 < lives)
+        {
+            powerUpSound.Play();
+            addingLifeText.text = "+1";
+        }
+        else
+        {
+            loseHeartSound.Play();
+            addingLifeText.text = " ";
+        }
     }
 
     public void UpdateScore(int scoreCountr)
@@ -81,6 +104,8 @@ public class GameManager : MonoBehaviour
 
     void Winning()
     {
+        winnerSound1.Play();
+        winnerSound2.Play();
         win = true;
         WinnerPanel.SetActive(true);
         WinScoreText.text = "Score: " + score + "  Lives: " + lives + "\nCoins: " + score*lives;
@@ -89,6 +114,8 @@ public class GameManager : MonoBehaviour
 
     void GameOver()
     {
+        loserSound1.Play();
+        loserSound2.Play();
         gameOver = true;
         gameOverPanel.SetActive(true);
         FinalLevelScoreText.text = "Score: " + score;
@@ -97,6 +124,8 @@ public class GameManager : MonoBehaviour
     public void GiveUp()
     {
         SceneManager.LoadScene("MainMenu");
+        Time.timeScale = 1f;
+        GamePaused = false;
     }
 
     public void Levelpicker()
