@@ -4,15 +4,10 @@ using UnityEngine;
 
 public class SkinLoader : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    public SpriteRenderer playerSR;
 
-    // Update is called once per frame
-    void Update()
+    private void Awake()
     {
-        
+        playerSR.sprite = ShopMenu.equippedSkin;
     }
 }
