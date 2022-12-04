@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class ballScript : MonoBehaviour
 {
+    //testing
     public Rigidbody2D rb;
     public bool inPlay, isCreated;
     public Transform paddle, powerup;
