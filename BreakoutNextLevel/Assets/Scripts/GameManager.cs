@@ -9,7 +9,7 @@ public class GameManager : MonoBehaviour
 {
     public GameObject[] hearts;
     public GameObject gameOverPanel, WinnerPanel, PausePanel;
-    public int lives, score, brickcountr, coins;
+    public int lives, score, brickcountr;
     public Text scoreText, FinalLevelScoreText, WinScoreText, addingLifeText;
     public bool gameOver, win;
     public AudioSource loserSound1, loserSound2, winnerSound1, winnerSound2, loseHeartSound, powerUpSound;
@@ -108,9 +108,8 @@ public class GameManager : MonoBehaviour
         winnerSound2.Play();
         win = true;
         WinnerPanel.SetActive(true);
-        coins = score * lives;
-        WinScoreText.text = "Score: " + score + "  Lives: " + lives + "\nCoins: " + coins;
-        PlayerPrefs.SetInt("SavedInteger", coins + PlayerPrefs.GetInt("SavedInteger"));
+        WinScoreText.text = "Score: " + score + "  Lives: " + lives + "\nCoins: " + score*lives;
+        PlayerPrefs.SetInt("SavedInteger", (score * lives) + PlayerPrefs.GetInt("SavedInteger"));
     }
 
     void GameOver()
