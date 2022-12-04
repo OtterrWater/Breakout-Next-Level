@@ -1005,6 +1005,7 @@ GameObject:
   - component: {fileID: 432707119}
   - component: {fileID: 432707121}
   - component: {fileID: 432707120}
+  - component: {fileID: 432707122}
   m_Layer: 5
   m_Name: DefaultItem
   m_TagString: Untagged
@@ -1072,6 +1073,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 432707118}
   m_CullTransparentMesh: 1
+--- !u!114 &432707122
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 432707118}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ab94a3d2b19ea524d8d78a96e1acb2e1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &459130674
 GameObject:
   m_ObjectHideFlags: 0
@@ -2027,6 +2040,7 @@ GameObject:
   - component: {fileID: 749727137}
   - component: {fileID: 749727139}
   - component: {fileID: 749727138}
+  - component: {fileID: 749727140}
   m_Layer: 5
   m_Name: BottleItem
   m_TagString: Untagged
@@ -2094,6 +2108,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 749727136}
   m_CullTransparentMesh: 1
+--- !u!114 &749727140
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 749727136}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ab94a3d2b19ea524d8d78a96e1acb2e1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &770098529
 GameObject:
   m_ObjectHideFlags: 0
@@ -3428,6 +3454,7 @@ GameObject:
   - component: {fileID: 1242873399}
   - component: {fileID: 1242873401}
   - component: {fileID: 1242873400}
+  - component: {fileID: 1242873402}
   m_Layer: 5
   m_Name: HolidayItem
   m_TagString: Untagged
@@ -3495,6 +3522,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1242873398}
   m_CullTransparentMesh: 1
+--- !u!114 &1242873402
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1242873398}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ab94a3d2b19ea524d8d78a96e1acb2e1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1279121583
 GameObject:
   m_ObjectHideFlags: 0
@@ -4176,6 +4215,7 @@ GameObject:
   - component: {fileID: 1539558760}
   - component: {fileID: 1539558762}
   - component: {fileID: 1539558761}
+  - component: {fileID: 1539558763}
   m_Layer: 5
   m_Name: Skins Panel
   m_TagString: Untagged
@@ -4246,6 +4286,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1539558759}
   m_CullTransparentMesh: 1
+--- !u!114 &1539558763
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1539558759}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 14dcb363eac109d4dbdb24bf7fe627f9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1621479325
 GameObject:
   m_ObjectHideFlags: 0
@@ -4333,6 +4385,7 @@ GameObject:
   - component: {fileID: 1669361239}
   - component: {fileID: 1669361241}
   - component: {fileID: 1669361240}
+  - component: {fileID: 1669361242}
   m_Layer: 5
   m_Name: SpaceShipItem
   m_TagString: Untagged
@@ -4400,6 +4453,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1669361238}
   m_CullTransparentMesh: 1
+--- !u!114 &1669361242
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1669361238}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ab94a3d2b19ea524d8d78a96e1acb2e1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1702200280
 GameObject:
   m_ObjectHideFlags: 0
@@ -4889,6 +4954,7 @@ GameObject:
   - component: {fileID: 1892055270}
   - component: {fileID: 1892055272}
   - component: {fileID: 1892055271}
+  - component: {fileID: 1892055273}
   m_Layer: 5
   m_Name: RodItem
   m_TagString: Untagged
@@ -4956,6 +5022,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1892055269}
   m_CullTransparentMesh: 1
+--- !u!114 &1892055273
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1892055269}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ab94a3d2b19ea524d8d78a96e1acb2e1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1935019313
 GameObject:
   m_ObjectHideFlags: 0
