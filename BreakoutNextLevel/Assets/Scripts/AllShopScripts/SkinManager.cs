@@ -11,11 +11,11 @@ public class SkinManager : MonoBehaviour
     {
         //SKIN DOES NOT AUTOMATICALLY SPAWN DEFAULT SKIN
         string mostRecentSkin = PlayerPrefs.GetString("skinPref", SkinInfo.SkinIDs.Default.ToString());
-        foreach (SkinInfo s in allSkins)
+        foreach (SkinInfo skin in allSkins)
         {
-            if (s.skinID.ToString() == mostRecentSkin)
+            if (skin.skinID.ToString() == mostRecentSkin)
             {
-                EquipSkin(s);
+                EquipSkin(skin);
             }
         }
     }

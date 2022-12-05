@@ -11,7 +11,7 @@ public class ShopMenu : MonoBehaviour
 
     //SHOP TRANSFER
     public static Sprite equippedSkin;
-    public int coins;
+    public int coins =20;
 
     void Start()
     {
@@ -47,9 +47,7 @@ public class ShopMenu : MonoBehaviour
     public bool SpendingCoins(int moneySpent)
     {
         //PLEASE HELP ME LOL(delete me comments after fixs please :3)
-        //me guessing how to add coins
         //thankyou, ur awesome :3
-        coins = PlayerPrefs.GetInt("SavedInteger");
         if (coins >= moneySpent)
         {
             coins -= moneySpent;
@@ -65,5 +63,4 @@ public class ShopMenu : MonoBehaviour
     {
         equippedSkin = skinInfo.skinSprite;
     }
-
 }
