@@ -31,7 +31,7 @@ public class SkinInShop : MonoBehaviour
         if (isSkinUnlocked)
         {
             //equip
-            FindObjectOfType<ShopMenu>().EquipSkin(skinInfo);
+            FindObjectOfType<SkinManager>().EquipSkin(skinInfo);
         }
         else
         {

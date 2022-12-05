@@ -4,10 +4,10 @@ using UnityEngine;
 
 public class SkinLoader : MonoBehaviour
 {
-    public SpriteRenderer playerSR;
+    public SpriteRenderer Paddle;
 
     private void Awake()
     {
-        playerSR.sprite = ShopMenu.equippedSkin;
+        Paddle.sprite = SkinManager.equippedSkin;
     }
 }
