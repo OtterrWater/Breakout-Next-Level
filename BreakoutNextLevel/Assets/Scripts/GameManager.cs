@@ -14,18 +14,23 @@ public class GameManager : MonoBehaviour
     public bool gameOver, win;
     public AudioSource loserSound1, loserSound2, winnerSound1, winnerSound2, loseHeartSound, powerUpSound;
 
+    //for skin
+    public SpriteRenderer Paddle;
+
     public static bool GamePaused = false;
 
+    private void Awake()
+    {
+        //adding skins
+        Paddle.sprite = SkinManager.equippedSkin;
+    }
 
-    // Start is called before the first frame update
     void Start()
     {
         scoreText.text = "Score: " + score;
-
         brickcountr = GameObject.FindGameObjectsWithTag("brick").Length;
     }
 
-    // Update is called once per frame
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.Escape))
@@ -45,9 +50,9 @@ public class GameManager : MonoBehaviour
 
     public void Continue()
     {
-       PausePanel.SetActive(false);
-       Time.timeScale = 1f;
-       GamePaused = false;
+        PausePanel.SetActive(false);
+        Time.timeScale = 1f;
+        GamePaused = false;
 
     }
 
@@ -60,7 +65,8 @@ public class GameManager : MonoBehaviour
             Destroy(hearts[0].gameObject);
             lives = 0;
             GameOver();
-        } else if (lives < 2)
+        }
+        else if (lives < 2)
         {
             loseHeartSound.Play();
             Destroy(hearts[1].gameObject);
@@ -75,7 +81,7 @@ public class GameManager : MonoBehaviour
     }
     public void AddaLifePowerUp()
     {
-        if (hearts.Length-1 < lives)
+        if (hearts.Length - 1 < lives)
         {
             powerUpSound.Play();
             addingLifeText.text = "+1";
@@ -96,7 +102,7 @@ public class GameManager : MonoBehaviour
     public void UpdateBrickCount()
     {
         brickcountr--;
-        if(brickcountr <= 0)
+        if (brickcountr <= 0)
         {
             Winning();
         }
@@ -108,7 +114,7 @@ public class GameManager : MonoBehaviour
         winnerSound2.Play();
         win = true;
         WinnerPanel.SetActive(true);
-        WinScoreText.text = "Score: " + score + "  Lives: " + lives + "\nCoins: " + score*lives;
+        WinScoreText.text = "Score: " + score + "  Lives: " + lives + "\nCoins: " + score * lives;
         PlayerPrefs.SetInt("SavedInteger", (score * lives) + PlayerPrefs.GetInt("SavedInteger"));
     }
 
