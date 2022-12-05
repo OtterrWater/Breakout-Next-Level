@@ -63,4 +63,5 @@ public class ShopMenu : MonoBehaviour
     {
         equippedSkin = skinInfo.skinSprite;
     }
+
 }
