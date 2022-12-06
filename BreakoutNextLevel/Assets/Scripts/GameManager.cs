@@ -15,7 +15,7 @@ public class GameManager : MonoBehaviour
     public AudioSource loserSound1, loserSound2, winnerSound1, winnerSound2, loseHeartSound, powerUpSound;
 
     //for skin
-    public SpriteRenderer Paddle;
+    [SerializeField] private SpriteRenderer Paddle;
 
     public static bool GamePaused = false;
 
