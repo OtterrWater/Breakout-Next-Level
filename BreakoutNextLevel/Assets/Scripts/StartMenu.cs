@@ -7,6 +7,7 @@ using UnityEngine.UI;
 public class StartMenu : MonoBehaviour
 {
     public GameObject cogPanel;
+    AsyncOperation loadingOperation;
 
     public static bool CogOn = false;
     void Update()
@@ -30,7 +31,8 @@ public class StartMenu : MonoBehaviour
 
     public void StartGame()
     {
-        SceneManager.LoadScene("LevelPicker");
+        SceneManager.LoadScene("shop");
+        loadingOperation = SceneManager.LoadSceneAsync("LevelPicker");
     }
 
     public void OpenProfile()
