@@ -6,39 +6,24 @@ using TMPro;
 
 public class SkinInShop : MonoBehaviour
 {
-    [SerializeField] private SkinInfo skinInfo;
-    public SkinInfo _skinInfo { get { return skinInfo; } }
-
-    [SerializeField] private TextMeshProUGUI buttonText;
-    [SerializeField] private Image skinImage;
-    [SerializeField] private bool isSkinUnlocked, isFreeSkin;
-
+    public SkinInfo skinInfo;
+    public TextMeshProUGUI buttonText;
+    public Image skinImage;
+    public bool isSkinUnlocked;
 
     public void Awake()
     {
-        skinImage.sprite = skinInfo._skinSprite;
-        if (isFreeSkin)
-        {
-            //buy
-            if (ShopMenu.Instance.SpendingCoins(0))
-            {
-                PlayerPrefs.SetInt(skinInfo._skinID.ToString(), 1);
-            }
-        }
+        skinImage.sprite = skinInfo.skinSprite;
         IsSkinUnlocked();
     }
 
     public void IsSkinUnlocked()
     {
-        if (PlayerPrefs.GetInt(skinInfo._skinID.ToString()) == 1)
+        if (PlayerPrefs.GetInt(skinInfo.skinID.ToString()) == 1)
         {
             isSkinUnlocked = true;
             buttonText.text = "Equip";
         }
-        else
-        {
-            buttonText.text = ("Buy: $" + skinInfo._skinPrice);
-        } 
     }
 
     public void OnButtonPress()
@@ -46,14 +31,14 @@ public class SkinInShop : MonoBehaviour
         if (isSkinUnlocked)
         {
             //equip
-            SkinManager.Instance.EquipSkin(this);
+            FindObjectOfType<SkinManager>().EquipSkin(skinInfo);
         }
         else
         {
             //buy
-            if (ShopMenu.Instance.SpendingCoins(skinInfo._skinPrice))
+            if (FindObjectOfType<ShopMenu>().SpendingCoins(skinInfo.skinPrice))
             {
-                PlayerPrefs.SetInt(skinInfo._skinID.ToString(), 1);
+                PlayerPrefs.SetInt(skinInfo.skinID.ToString(), 1);
                 IsSkinUnlocked();
             }
         }

@@ -7,17 +7,11 @@ using UnityEngine.UI;
 
 public class ShopMenu : MonoBehaviour
 {
-    public static ShopMenu Instance;
-    [SerializeField] private int coins;
-    private const string prefMoney = "prefMoney";
     public Text moneyCntrText;
-    public static Sprite equippedSkin;
 
-    private void Awake()
-    {
-        Instance = this;
-        coins = PlayerPrefs.GetInt(prefMoney);
-    }
+    //SHOP TRANSFER
+    public static Sprite equippedSkin;
+    public int coins =20;
 
     void Start()
     {
@@ -32,30 +26,9 @@ public class ShopMenu : MonoBehaviour
         }
     }
 
-    //using coins(purchasing)
-    public bool SpendingCoins(int moneySpent)
-    {
-        //PLEASE HELP ME LOL(delete me comments after fixs please :3)
-        //thankyou, ur awesome :3
-        if (coins >= moneySpent)
-        {
-            coins -= moneySpent;
-            PlayerPrefs.SetInt(prefMoney, coins);
-            return true;
-        }
-        else
-        {
-            return false;
-        }
-    }
-
     public void shoptomain()
     {
         SceneManager.LoadScene("MainMenu");
-    }
-    public void EquipSkin(SkinInfo skinInfo)
-    {
-        equippedSkin = skinInfo._skinSprite;
     }
 
     public string purchaseSkin(string skinName)
@@ -68,4 +41,27 @@ public class ShopMenu : MonoBehaviour
     {
         return "";
     }
+
+    //SHOP TRANSFER
+    //using coins(purchasing)
+    public bool SpendingCoins(int moneySpent)
+    {
+        //PLEASE HELP ME LOL(delete me comments after fixs please :3)
+        //thankyou, ur awesome :3
+        if (coins >= moneySpent)
+        {
+            coins -= moneySpent;
+            return true;
+        }
+        else
+        {
+            return false;
+        }
+    }
+
+    public void EquipSkin(SkinInfo skinInfo)
+    {
+        equippedSkin = skinInfo.skinSprite;
+    }
+
 }

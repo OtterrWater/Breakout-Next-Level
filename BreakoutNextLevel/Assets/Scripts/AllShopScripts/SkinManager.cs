@@ -1,53 +1,28 @@
-using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
 
 public class SkinManager : MonoBehaviour
 {
-    public static SkinManager Instance;
-    public static Sprite equippedSkin { get; private set; }
-    [SerializeField] private SkinInfo[] allSkins;
-    private const string skinPref = "skinPref";
-    [SerializeField] private Transform skinsInShopPanelsParent;
-    [SerializeField] private List<SkinInShop> skinsInShopPanels = new List<SkinInShop>();
-    private Button usingThisSkin;
+    public static Sprite equippedSkin;
+    public SkinInfo[] allSkins;
 
     private void Awake()
     {
-        Instance = this;
         //SKIN DOES NOT AUTOMATICALLY SPAWN DEFAULT SKIN
-        foreach (Transform s in skinsInShopPanelsParent)
+        string mostRecentSkin = PlayerPrefs.GetString("skinPref", SkinInfo.SkinIDs.Default.ToString());
+        foreach (SkinInfo skin in allSkins)
         {
-            if(s.TryGetComponent(out SkinInShop skinInShop))
+            if (skin.skinID.ToString() == mostRecentSkin)
             {
-                skinsInShopPanels.Add(skinInShop);
+                EquipSkin(skin);
             }
-            EquipPrevSkin();
-            SkinInShop skinEquippedPanel = Array.Find(skinsInShopPanels.ToArray(), dummyFind => dummyFind._skinInfo._skinSprite == equippedSkin);
-            usingThisSkin = skinEquippedPanel.GetComponentInChildren<Button>();
-            usingThisSkin.interactable = false;
         }
     }
 
-    private void EquipPrevSkin()
+    public void EquipSkin(SkinInfo skinInfo)
     {
-        string TheMostRecentSkin = PlayerPrefs.GetString("skinPref", SkinInfo.SkinIDs.Default.ToString());
-        SkinInShop skinEquippedPanel = Array.Find(skinsInShopPanels.ToArray(), dummyFind => dummyFind._skinInfo._skinID.ToString() == TheMostRecentSkin);
-        EquipSkin(skinEquippedPanel);
-    }
-
-    public void EquipSkin(SkinInShop skinInfoInShop)
-    {
-        equippedSkin = skinInfoInShop._skinInfo._skinSprite;
-        PlayerPrefs.SetString(skinPref, skinInfoInShop._skinInfo._skinID.ToString());
-
-        if (usingThisSkin != null)
-        {
-            usingThisSkin.interactable = true;
-        }
-        usingThisSkin = skinInfoInShop.GetComponentInChildren<Button>();
-        usingThisSkin.interactable = false;
+        equippedSkin = skinInfo.skinSprite;
+        PlayerPrefs.SetString("skinPref", skinInfo.skinID.ToString());
     }
 }

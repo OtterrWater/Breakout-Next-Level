@@ -6,12 +6,7 @@ using UnityEngine;
 public class SkinInfo : ScriptableObject
 {
     public enum SkinIDs { Default, Bottle, Rod, SpaceShip, Holiday }
-    [SerializeField] private SkinIDs skinID;
-    public SkinIDs _skinID { get { return skinID; } }
-
-    [SerializeField] private Sprite skinSprite;
-    public Sprite _skinSprite { get { return skinSprite; } }
-
-    [SerializeField] private int skinPrice;
-    public int _skinPrice { get { return skinPrice; } }
+    public SkinIDs skinID;
+    public Sprite skinSprite;
+    public int skinPrice;
 }
