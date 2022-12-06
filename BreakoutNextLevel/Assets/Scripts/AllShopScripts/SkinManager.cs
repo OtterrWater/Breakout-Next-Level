@@ -12,7 +12,7 @@ public class SkinManager : MonoBehaviour
     private const string skinPref = "skinPref";
     [SerializeField] private Transform skinsInShopPanelsParent;
     [SerializeField] private List<SkinInShop> skinsInShopPanels = new List<SkinInShop>();
-    private Button usingThisSkin;
+    private Button usingThisSkinButton;
 
     private void Awake()
     {
@@ -24,11 +24,11 @@ public class SkinManager : MonoBehaviour
             {
                 skinsInShopPanels.Add(skinInShop);
             }
-            EquipPrevSkin();
-            SkinInShop skinEquippedPanel = Array.Find(skinsInShopPanels.ToArray(), dummyFind => dummyFind._skinInfo._skinSprite == equippedSkin);
-            usingThisSkin = skinEquippedPanel.GetComponentInChildren<Button>();
-            usingThisSkin.interactable = false;
         }
+        EquipPrevSkin();
+        SkinInShop skinEquippedPanel = Array.Find(skinsInShopPanels.ToArray(), dummyFind => dummyFind._skinInfo._skinSprite == equippedSkin);
+        usingThisSkinButton = skinEquippedPanel.GetComponentInChildren<Button>();
+        usingThisSkinButton.interactable = false;
     }
 
     private void EquipPrevSkin()
@@ -43,11 +43,11 @@ public class SkinManager : MonoBehaviour
         equippedSkin = skinInfoInShop._skinInfo._skinSprite;
         PlayerPrefs.SetString(skinPref, skinInfoInShop._skinInfo._skinID.ToString());
 
-        if (usingThisSkin != null)
+        if (usingThisSkinButton != null)
         {
-            usingThisSkin.interactable = true;
+            usingThisSkinButton.interactable = true;
         }
-        usingThisSkin = skinInfoInShop.GetComponentInChildren<Button>();
-        usingThisSkin.interactable = false;
+        usingThisSkinButton = skinInfoInShop.GetComponentInChildren<Button>();
+        usingThisSkinButton.interactable = false;
     }
 }
