@@ -37,7 +37,7 @@ public class SkinInShop : MonoBehaviour
         }
         else
         {
-            buttonText.text = ("Buy: $" + skinInfo._skinPrice);
+            buttonText.text = ("Buy: " + skinInfo._skinPrice);
         } 
     }
 

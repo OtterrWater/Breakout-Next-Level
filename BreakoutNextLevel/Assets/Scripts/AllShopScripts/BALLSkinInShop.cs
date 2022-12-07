@@ -37,7 +37,7 @@ public class BALLSkinInShop : MonoBehaviour
         }
         else
         {
-            buttonText.text = ("Buy: $" + BALLskinInfo._BALLskinPrice);
+            buttonText.text = ("Buy: " + BALLskinInfo._BALLskinPrice);
         } 
     }
 

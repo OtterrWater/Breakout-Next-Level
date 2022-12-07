@@ -14,4 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   BALLskinID: 4
   BALLskinSprite: {fileID: 21300000, guid: f299a329c566c00438cb75b97acf024e, type: 3}
-  BALLskinPrice: 0
+  BALLskinPrice: 15
