@@ -5,9 +5,6 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 0
-    path: 
-    guid: 00000000000000000000000000000000
   - enabled: 1
     path: Assets/Scenes/Menus/CreateProfile/CreateProfileMenu.unity
     guid: 090433706d9265a48999af575d402829
@@ -29,7 +26,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Levels/levelone.unity
     guid: ee68f5c95dfc40f4bb21d0b1331f0695
-  - enabled: 0
-    path: 
-    guid: 00000000000000000000000000000000
+  - enabled: 1
+    path: Assets/Scenes/Levels/leveltwo.unity
+    guid: 27f02dcdd6f287c479dba03e1038d920
+  - enabled: 1
+    path: Assets/Scenes/Levels/levelthree.unity
+    guid: 8f3c34f24b96fb84b8beb85deffdd1b8
   m_configObjects: {}
