@@ -10,8 +10,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: dda8482c9fc9085448de5030f53832ac, type: 3}
-  m_Name: SpaceShip
+  m_Name: MintStick
   m_EditorClassIdentifier: 
-  skinID: 6
-  skinSprite: {fileID: 21300000, guid: ca924d2ad5e543545a46b0dd29c9fb8d, type: 3}
-  skinPrice: 10
+  skinID: 5
+  skinSprite: {fileID: 21300000, guid: aadaea04805ca7748850da6df094b3c6, type: 3}
+  skinPrice: 0

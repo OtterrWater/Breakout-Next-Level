@@ -10,8 +10,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: dda8482c9fc9085448de5030f53832ac, type: 3}
-  m_Name: Rod
+  m_Name: GlassBottle
   m_EditorClassIdentifier: 
   skinID: 2
-  skinSprite: {fileID: 21300000, guid: ac7f6a6e1245aef41af163992866c654, type: 3}
-  skinPrice: 10
+  skinSprite: {fileID: 21300000, guid: 2094b3cd84a833b4e9438c5a8f00648b, type: 3}
+  skinPrice: 0

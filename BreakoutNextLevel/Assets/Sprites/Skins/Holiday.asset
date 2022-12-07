@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dda8482c9fc9085448de5030f53832ac, type: 3}
   m_Name: Holiday
   m_EditorClassIdentifier: 
-  skinID: 4
-  skinSprite: {fileID: 21300000, guid: c56b8ef956b7c754d9ba2ceb4e249685, type: 3}
+  skinID: 3
+  skinSprite: {fileID: 21300000, guid: 9937614841b1fc64f9904cfccfdde0c4, type: 3}
   skinPrice: 10
