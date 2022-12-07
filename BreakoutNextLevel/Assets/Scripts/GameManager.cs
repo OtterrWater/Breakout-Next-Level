@@ -150,4 +150,9 @@ public class GameManager : MonoBehaviour
     {
         SceneManager.LoadScene("leveltwo");
     }
+
+    public void levelthree()
+    {
+        SceneManager.LoadScene("levelthree");
+    }
 }
