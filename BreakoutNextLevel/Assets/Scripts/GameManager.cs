@@ -15,6 +15,7 @@ public class GameManager : MonoBehaviour
 
     //for skin
     [SerializeField] private SpriteRenderer Paddle;
+    [SerializeField] private SpriteRenderer Ball;
 
     public static bool GamePaused = false;
 
@@ -22,6 +23,7 @@ public class GameManager : MonoBehaviour
     {
         //adding skins
         Paddle.sprite = SkinManager.equippedSkin;
+        Ball.sprite = BALLSkinManager.BALLequippedSkin;
     }
 
     void Start()
