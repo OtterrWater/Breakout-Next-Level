@@ -10,8 +10,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: dda8482c9fc9085448de5030f53832ac, type: 3}
-  m_Name: Bottle
+  m_Name: Baguette
   m_EditorClassIdentifier: 
   skinID: 1
-  skinSprite: {fileID: 21300000, guid: cfedca60ba3d67b479d76e4c7c9f7a25, type: 3}
-  skinPrice: 10
+  skinSprite: {fileID: 21300000, guid: d646be7a63f4e1a4ca81e935d036afad, type: 3}
+  skinPrice: 0
