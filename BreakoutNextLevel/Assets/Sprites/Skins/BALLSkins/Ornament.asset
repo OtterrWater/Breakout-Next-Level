@@ -9,9 +9,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dda8482c9fc9085448de5030f53832ac, type: 3}
-  m_Name: MintStick
+  m_Script: {fileID: 11500000, guid: 8f79c7d2f968dfe47a4642e476c2740a, type: 3}
+  m_Name: Ornament
   m_EditorClassIdentifier: 
-  skinID: 5
-  skinSprite: {fileID: 21300000, guid: 0fe0ff9c4366d1a46be5dfcafcc165b4, type: 3}
-  skinPrice: 0
+  BALLskinID: 3
+  BALLskinSprite: {fileID: 21300000, guid: d6b01f4b172431942af70bb27877bcf7, type: 3}
+  BALLskinPrice: 0

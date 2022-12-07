@@ -10142,6 +10142,7 @@ MonoBehaviour:
   loseHeartSound: {fileID: 758404080}
   powerUpSound: {fileID: 1454498316}
   Paddle: {fileID: 1656417615}
+  Ball: {fileID: 17374264}
 --- !u!4 &1969984995
 Transform:
   m_ObjectHideFlags: 0

@@ -10,8 +10,10 @@ public class ShopMenu : MonoBehaviour
     public static ShopMenu Instance;
     [SerializeField] private int coins;
     private const string prefMoney = "prefMoney";
+    //private const string BALLprefMoney = "BALLprefMoney";
     public Text moneyCntrText;
     public static Sprite equippedSkin;
+    public static Sprite BALLequippedSkin;
 
     private void Awake()
     {
@@ -53,9 +55,15 @@ public class ShopMenu : MonoBehaviour
     {
         SceneManager.LoadScene("MainMenu");
     }
+
     public void EquipSkin(SkinInfo skinInfo)
     {
         equippedSkin = skinInfo._skinSprite;
+    }
+
+    public void EquipSkin(BALLSkinInfo BALLskinInfo)
+    {
+        BALLequippedSkin = BALLskinInfo._BALLskinSprite;
     }
 
     public string purchaseSkin(string skinName)
