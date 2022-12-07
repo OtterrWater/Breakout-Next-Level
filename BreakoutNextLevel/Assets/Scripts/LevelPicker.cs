@@ -2,9 +2,22 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class LevelPicker : MonoBehaviour
 {
+    public Button[] levelButtons;
+    void Start()
+    {
+        int currentLevel = PlayerPrefs.GetInt("currentStateAt", 6);
+        for(int i = 1; i < levelButtons.Length; i++)
+        {
+            if (i + 6 > currentLevel)
+            {
+                levelButtons[i].interactable = false;
+            }
+        }
+    }
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.Escape))

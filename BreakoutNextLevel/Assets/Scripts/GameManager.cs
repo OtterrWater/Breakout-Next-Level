@@ -8,7 +8,7 @@ public class GameManager : MonoBehaviour
 {
     public GameObject[] hearts;
     public GameObject gameOverPanel, WinnerPanel, PausePanel;
-    public int lives, score, brickcountr;
+    public int lives, score, brickcountr, unlockLevel;
     public Text scoreText, FinalLevelScoreText, WinScoreText, addingLifeText;
     public bool gameOver, win;
     public AudioSource loserSound1, loserSound2, winnerSound1, winnerSound2, loseHeartSound, powerUpSound;
@@ -30,6 +30,8 @@ public class GameManager : MonoBehaviour
     {
         scoreText.text = "Score: " + score;
         brickcountr = GameObject.FindGameObjectsWithTag("brick").Length;
+
+        unlockLevel = SceneManager.GetActiveScene().buildIndex + 1;
     }
 
     void Update()
@@ -117,6 +119,12 @@ public class GameManager : MonoBehaviour
         WinnerPanel.SetActive(true);
         WinScoreText.text = "Score: " + score + "  Lives: " + lives + "\nCoins: " + score * lives;
         PlayerPrefs.SetInt("SavedInteger", (score * lives) + PlayerPrefs.GetInt("SavedInteger"));
+        if (win) {
+        if (unlockLevel > PlayerPrefs.GetInt("currentStateAt"))
+            {
+                PlayerPrefs.SetInt("currentStateAt", unlockLevel);
+            }
+        }
     }
 
     void GameOver()
