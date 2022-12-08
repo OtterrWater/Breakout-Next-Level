@@ -10,6 +10,7 @@ public class ballScript : MonoBehaviour
     public float speed;
     public GameManager gm;
     public AudioSource ballImplact1, ballImplact2;
+    //public Vector2 rotation;
 
     // Start is called before the first frame update
     void Start()

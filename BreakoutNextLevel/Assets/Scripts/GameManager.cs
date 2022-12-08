@@ -82,6 +82,7 @@ public class GameManager : MonoBehaviour
         AddaLifePowerUp();
 
     }
+
     public void AddaLifePowerUp()
     {
         if (hearts.Length - 1 < lives)
