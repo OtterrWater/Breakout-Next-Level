@@ -8,7 +8,7 @@ using UnityEngine.UI;
 public class ShopMenu : MonoBehaviour
 {
     public static ShopMenu Instance;
-    [SerializeField] private int coins= PlayerPrefs.GetInt("SavedCoins"); //getting the player coins from PlayerPrefs registry
+    [SerializeField] private int coins;
     public Text moneyCntrText;
     public static Sprite equippedSkin;
     public static Sprite BALLequippedSkin;
@@ -21,6 +21,7 @@ public class ShopMenu : MonoBehaviour
 
     void Start()
     {
+        coins = PlayerPrefs.GetInt("SavedCoins");
         moneyCntrText.text = "Coins: " + PlayerPrefs.GetInt("SavedCoins");
     }
 
