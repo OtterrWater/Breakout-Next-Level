@@ -14,7 +14,7 @@ public class profileInfo : SavePrefs
     {
         LoadGame();
         ProfileNameText.text = "John Doe";
-        CoinText.text = "Coins: "+ PlayerPrefs.GetInt("SavedInteger");
+        CoinText.text = "Coins: "+ PlayerPrefs.GetInt("SavedCoins");
         SkinText.text = "Number of Skins: 00000";
     }
 

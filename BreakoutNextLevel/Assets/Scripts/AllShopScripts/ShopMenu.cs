@@ -8,9 +8,7 @@ using UnityEngine.UI;
 public class ShopMenu : MonoBehaviour
 {
     public static ShopMenu Instance;
-    [SerializeField] private int coins;
-    private const string prefMoney = "prefMoney";
-    //private const string BALLprefMoney = "BALLprefMoney";
+    [SerializeField] private int coins= PlayerPrefs.GetInt("SavedCoins"); //getting the player coins from PlayerPrefs registry
     public Text moneyCntrText;
     public static Sprite equippedSkin;
     public static Sprite BALLequippedSkin;
@@ -18,12 +16,12 @@ public class ShopMenu : MonoBehaviour
     private void Awake()
     {
         Instance = this;
-        coins = PlayerPrefs.GetInt(prefMoney);
+        coins = PlayerPrefs.GetInt("SavedCoins");
     }
 
     void Start()
     {
-        moneyCntrText.text = "Coins: " + PlayerPrefs.GetInt("SavedInteger");
+        moneyCntrText.text = "Coins: " + PlayerPrefs.GetInt("SavedCoins");
     }
 
     void Update()
@@ -37,16 +35,16 @@ public class ShopMenu : MonoBehaviour
     //using coins(purchasing)
     public bool SpendingCoins(int moneySpent)
     {
-        //PLEASE HELP ME LOL(delete me comments after fixs please :3)
-        //thankyou, ur awesome :3
         if (coins >= moneySpent)
         {
             coins -= moneySpent;
-            PlayerPrefs.SetInt(prefMoney, coins);
+            PlayerPrefs.SetInt("SavedCoins", coins); 
+            Debug.Log(moneySpent + "coins spent");
             return true;
         }
         else
         {
+            Debug.Log("Not enough coins");
             return false;
         }
     }
@@ -66,14 +64,4 @@ public class ShopMenu : MonoBehaviour
         BALLequippedSkin = BALLskinInfo._BALLskinSprite;
     }
 
-    public string purchaseSkin(string skinName)
-    {
-        //buy skin
-        //update skin counter
-        return "";
-    }
-    public string purchasePower(string powerName)
-    {
-        return "";
-    }
 }
