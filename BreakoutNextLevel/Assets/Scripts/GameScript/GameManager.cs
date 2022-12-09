@@ -44,9 +44,12 @@ public class GameManager : MonoBehaviour
             }
             else
             {
-                PausePanel.SetActive(true);
-                Time.timeScale = 0f;
-                GamePaused = true;
+                if (gameOver == false && win == false)
+                {
+                    PausePanel.SetActive(true);
+                    Time.timeScale = 0f;
+                    GamePaused = true;
+                }
             }
         }
     }
@@ -56,7 +59,6 @@ public class GameManager : MonoBehaviour
         PausePanel.SetActive(false);
         Time.timeScale = 1f;
         GamePaused = false;
-
     }
 
     public void UpdateLives(int livesCountr)
