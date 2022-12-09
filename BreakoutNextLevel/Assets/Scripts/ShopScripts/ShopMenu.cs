@@ -12,6 +12,7 @@ public class ShopMenu : MonoBehaviour
     public Text moneyCntrText;
     public static Sprite equippedSkin;
     public static Sprite BALLequippedSkin;
+    public GameObject urbrokePanel;
 
     private void Awake()
     {
@@ -38,6 +39,7 @@ public class ShopMenu : MonoBehaviour
     {
         if (coins >= moneySpent)
         {
+            urbrokePanel.SetActive(false);
             coins -= moneySpent;
             PlayerPrefs.SetInt("SavedCoins", coins);
             moneyCntrText.text = "Coins: " + PlayerPrefs.GetInt("SavedCoins");
@@ -46,9 +48,15 @@ public class ShopMenu : MonoBehaviour
         }
         else
         {
+            urbrokePanel.SetActive(true);
             Debug.Log("Not enough coins");
             return false;
         }
+    }
+
+    public void undestood()
+    {
+        urbrokePanel.SetActive(false);
     }
 
     public void shoptomain()
@@ -65,5 +73,4 @@ public class ShopMenu : MonoBehaviour
     {
         BALLequippedSkin = BALLskinInfo._BALLskinSprite;
     }
-
 }
