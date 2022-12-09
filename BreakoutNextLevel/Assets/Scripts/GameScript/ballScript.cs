@@ -64,7 +64,7 @@ public class ballScript : MonoBehaviour
         if (other.transform.CompareTag("brick"))
         {
             int chance = Random.Range (1, 101);
-            if (chance < 50 && !isCreated)
+            if (chance < 101 && !isCreated && gm.lives < 3)
             {
                 Instantiate(powerup, other.transform.position, other.transform.rotation);
                 isCreated = true;

@@ -9,9 +9,9 @@ public class GameManager : MonoBehaviour
     public GameObject[] hearts;
     public GameObject gameOverPanel, WinnerPanel, PausePanel;
     public int lives, score, brickcountr, unlockLevel;
-    public Text scoreText, FinalLevelScoreText, WinScoreText, addingLifeText;
+    public Text scoreText, FinalLevelScoreText, WinScoreText;
     public bool gameOver, win;
-    public AudioSource loserSound1, loserSound2, winnerSound1, winnerSound2, loseHeartSound, powerUpSound;
+    public AudioSource loserSound1, loserSound2, winnerSound1, winnerSound2, loseHeartSound;
 
     //for skin
     [SerializeField] private SpriteRenderer Paddle;
@@ -28,7 +28,7 @@ public class GameManager : MonoBehaviour
 
     void Start()
     {
-        scoreText.text = "Score: " + score;
+        scoreText.text = "SCORE: " + score;
         brickcountr = GameObject.FindGameObjectsWithTag("brick").Length;
 
         unlockLevel = SceneManager.GetActiveScene().buildIndex + 1;
@@ -79,28 +79,12 @@ public class GameManager : MonoBehaviour
             loseHeartSound.Play();
             Destroy(hearts[2].gameObject);
         }
-        AddaLifePowerUp();
-
-    }
-
-    public void AddaLifePowerUp()
-    {
-        if (hearts.Length - 1 < lives)
-        {
-            powerUpSound.Play();
-            addingLifeText.text = "+1";
-        }
-        else
-        {
-            loseHeartSound.Play();
-            addingLifeText.text = " ";
-        }
     }
 
     public void UpdateScore(int scoreCountr)
     {
         score += scoreCountr;
-        scoreText.text = "Score: " + score;
+        scoreText.text = "SCORE: " + score;
     }
 
     public void UpdateBrickCount()

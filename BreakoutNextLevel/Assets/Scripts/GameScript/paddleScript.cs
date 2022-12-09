@@ -1,10 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class paddleScript : MonoBehaviour
 {
     public float speed, leftScreenEdge, rightScreenEdge;
+    public AudioSource powerUpSound;
+    public Text addingLifeText;
     public GameManager gm;
 
     // Start is called before the first frame update
@@ -44,6 +47,8 @@ public class paddleScript : MonoBehaviour
         if (other.CompareTag("extraLife"))
         {
             gm.UpdateLives(1);
+            powerUpSound.Play();
+            addingLifeText.text = "+1 life POWERUP";
             Destroy(other.gameObject);
         }
     }

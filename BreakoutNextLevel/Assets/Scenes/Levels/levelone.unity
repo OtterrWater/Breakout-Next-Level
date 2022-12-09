@@ -4755,8 +4755,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -776.3, y: -57.600006}
-  m_SizeDelta: {x: 230.0484, y: 55.005}
+  m_AnchoredPosition: {x: -116.360565, y: -63.487564}
+  m_SizeDelta: {x: 232.7311, y: 44.6014}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1068781311
 MonoBehaviour:
@@ -4780,10 +4780,10 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 12800000, guid: 997a43b767814dd0a7642ec9b78cba41, type: 3}
-    m_FontSize: 30
+    m_FontSize: 20
     m_FontStyle: 0
     m_BestFit: 0
-    m_MinSize: 3
+    m_MinSize: 1
     m_MaxSize: 40
     m_Alignment: 1
     m_AlignByGeometry: 0
@@ -7509,6 +7509,8 @@ MonoBehaviour:
   speed: 10
   leftScreenEdge: -7.244709
   rightScreenEdge: 7.244709
+  powerUpSound: {fileID: 1454498316}
+  addingLifeText: {fileID: 1068781311}
   gm: {fileID: 1969984994}
 --- !u!60 &1656417618
 PolygonCollider2D:
@@ -8335,7 +8337,6 @@ MonoBehaviour:
   scoreText: {fileID: 1951859831}
   FinalLevelScoreText: {fileID: 1634520787}
   WinScoreText: {fileID: 523458942}
-  addingLifeText: {fileID: 1068781311}
   gameOver: 0
   win: 0
   loserSound1: {fileID: 1473902646}
@@ -8343,7 +8344,6 @@ MonoBehaviour:
   winnerSound1: {fileID: 134888048}
   winnerSound2: {fileID: 296587772}
   loseHeartSound: {fileID: 758404080}
-  powerUpSound: {fileID: 1454498316}
   Paddle: {fileID: 1656417615}
   Ball: {fileID: 17374264}
 --- !u!4 &1969984995
