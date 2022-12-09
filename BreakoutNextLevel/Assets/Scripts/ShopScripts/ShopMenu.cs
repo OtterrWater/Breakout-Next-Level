@@ -39,7 +39,8 @@ public class ShopMenu : MonoBehaviour
         if (coins >= moneySpent)
         {
             coins -= moneySpent;
-            PlayerPrefs.SetInt("SavedCoins", coins); 
+            PlayerPrefs.SetInt("SavedCoins", coins);
+            moneyCntrText.text = "Coins: " + PlayerPrefs.GetInt("SavedCoins");
             Debug.Log(moneySpent + "coins spent");
             return true;
         }
