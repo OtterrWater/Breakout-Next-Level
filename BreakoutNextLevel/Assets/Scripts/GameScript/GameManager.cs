@@ -7,7 +7,7 @@ using UnityEngine.SceneManagement;
 public class GameManager : MonoBehaviour
 {
     public GameObject[] hearts;
-    public GameObject gameOverPanel, WinnerPanel, PausePanel;
+    public GameObject gameOverPanel, WinnerPanel, PausePanel, areyousurePanel;
     public int lives, score, brickcountr, unlockLevel;
     public Text scoreText, FinalLevelScoreText, WinScoreText;
     public bool gameOver, win;
@@ -59,6 +59,16 @@ public class GameManager : MonoBehaviour
         PausePanel.SetActive(false);
         Time.timeScale = 1f;
         GamePaused = false;
+    }
+
+    public void accidentalQuit()
+    {
+        areyousurePanel.SetActive(false);
+    }
+
+    public void failSafeLeaveGame()
+    {
+        areyousurePanel.SetActive(true);
     }
 
     public void UpdateLives(int livesCountr)
