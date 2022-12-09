@@ -129,15 +129,21 @@ public class GameManager : MonoBehaviour
         loserSound1.Play();
         loserSound2.Play();
         gameOver = true;
+        PausePanel.SetActive(false);
         gameOverPanel.SetActive(true);
         FinalLevelScoreText.text = "Score: " + score;
     }
 
     public void GiveUp()
     {
-        SceneManager.LoadScene("MainMenu");
+        GameOver();
         Time.timeScale = 1f;
         GamePaused = false;
+    }
+
+    public void Home()
+    {
+        SceneManager.LoadScene("MainMenu");
     }
 
     public void Levelpicker()
