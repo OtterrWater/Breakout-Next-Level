@@ -258,6 +258,134 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7699278}
   m_CullTransparentMesh: 1
+--- !u!1 &16873914
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 16873915}
+  - component: {fileID: 16873916}
+  m_Layer: 0
+  m_Name: BrickBreakSound
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &16873915
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 16873914}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 705073525}
+  m_RootOrder: 7
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!82 &16873916
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 16873914}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 97daaf0f9529a9d4689b0d753487dadd, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: 0.3
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &17374262
 GameObject:
   m_ObjectHideFlags: 0
@@ -385,10 +513,11 @@ MonoBehaviour:
   isCreated: 0
   paddle: {fileID: 1070642094}
   powerup: {fileID: 6825556817405831267, guid: 43f119b0967ded6459ae26e062251cba, type: 3}
-  speed: 500
+  speed: 575
   gm: {fileID: 1969984994}
   ballImplact1: {fileID: 1252716826}
   ballImplact2: {fileID: 1293710403}
+  brickbreakSound: {fileID: 16873916}
 --- !u!58 &17374267
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -2806,6 +2935,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 589553255}
     m_Modifications:
+    - target: {fileID: -4894334970397727795, guid: 70aef51fe5676ba4b96b5ade6dd3ca47, type: 3}
+      propertyPath: hitsToBreak
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: -4894334970397727795, guid: 70aef51fe5676ba4b96b5ade6dd3ca47, type: 3}
+      propertyPath: brickbreakSound
+      value: 
+      objectReference: {fileID: 16873916}
     - target: {fileID: 9178608179195345122, guid: 70aef51fe5676ba4b96b5ade6dd3ca47, type: 3}
       propertyPath: m_Name
       value: bricks (26)
@@ -3759,6 +3896,7 @@ Transform:
   - {fileID: 758404081}
   - {fileID: 293026068}
   - {fileID: 1454498317}
+  - {fileID: 16873915}
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -4312,6 +4450,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 589553255}
     m_Modifications:
+    - target: {fileID: -4894334970397727795, guid: 70aef51fe5676ba4b96b5ade6dd3ca47, type: 3}
+      propertyPath: hitsToBreak
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: -4894334970397727795, guid: 70aef51fe5676ba4b96b5ade6dd3ca47, type: 3}
+      propertyPath: brickbreakSound
+      value: 
+      objectReference: {fileID: 16873916}
     - target: {fileID: 9178608179195345122, guid: 70aef51fe5676ba4b96b5ade6dd3ca47, type: 3}
       propertyPath: m_Name
       value: bricks (3)
@@ -4755,6 +4901,10 @@ PrefabInstance:
     - target: {fileID: 9178608179195345122, guid: 70aef51fe5676ba4b96b5ade6dd3ca47, type: 3}
       propertyPath: m_Name
       value: bricks (8)
+      objectReference: {fileID: 0}
+    - target: {fileID: 9178608179195345122, guid: 70aef51fe5676ba4b96b5ade6dd3ca47, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 9178608179195345127, guid: 70aef51fe5676ba4b96b5ade6dd3ca47, type: 3}
       propertyPath: m_RootOrder
@@ -5598,6 +5748,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 589553255}
     m_Modifications:
+    - target: {fileID: -4894334970397727795, guid: 70aef51fe5676ba4b96b5ade6dd3ca47, type: 3}
+      propertyPath: hitsToBreak
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: -4894334970397727795, guid: 70aef51fe5676ba4b96b5ade6dd3ca47, type: 3}
+      propertyPath: brickbreakSound
+      value: 
+      objectReference: {fileID: 16873916}
     - target: {fileID: 9178608179195345122, guid: 70aef51fe5676ba4b96b5ade6dd3ca47, type: 3}
       propertyPath: m_Name
       value: bricks (22)
@@ -8119,7 +8277,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1969984994}
         m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
-        m_MethodName: levelone
+        m_MethodName: leveltwo
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -8857,8 +9015,8 @@ GameObject:
   - component: {fileID: 1656417616}
   - component: {fileID: 1656417615}
   - component: {fileID: 1656417617}
-  - component: {fileID: 1656417618}
   - component: {fileID: 1656417619}
+  - component: {fileID: 1656417620}
   m_Layer: 0
   m_Name: paddle
   m_TagString: Untagged
@@ -8946,13 +9104,34 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 371be86650d0fd4439f4299e2bc7630c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 10
+  speed: 11
   leftScreenEdge: -7.244709
   rightScreenEdge: 7.244709
   powerUpSound: {fileID: 1454498316}
   addingLifeText: {fileID: 404528576}
   gm: {fileID: 1969984994}
---- !u!60 &1656417618
+--- !u!50 &1656417619
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1656417614}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 7
+--- !u!60 &1656417620
 PolygonCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8989,25 +9168,23 @@ PolygonCollider2D:
       - {x: 5.46, y: -0.175}
       - {x: 5.46, y: 0.055}
       - {x: 5.42, y: 0.13499999}
-      - {x: 5.35379, y: 0.17913118}
-      - {x: 5.2485147, y: 0.22051814}
-      - {x: 5.1614656, y: 0.2815068}
-      - {x: 5.0354767, y: 0.36226773}
-      - {x: 4.831386, y: 0.50098217}
-      - {x: 4.0043797, y: 1.1873752}
-      - {x: 3.1126618, y: 0.67630607}
-      - {x: 2.1770203, y: 1.3063053}
-      - {x: 1.2774868, y: 0.8224361}
-      - {x: 0.43768454, y: 1.3253726}
-      - {x: -0.36869058, y: 0.8000928}
-      - {x: -1.3119276, y: 1.4308646}
-      - {x: -2.0386999, y: 0.7461356}
-      - {x: -2.8669388, y: 1.3383464}
-      - {x: -3.52642, y: 0.7494935}
-      - {x: -3.9959536, y: 1.2585572}
-      - {x: -4.6323023, y: 0.6711256}
-      - {x: -5.1850033, y: 0.2970889}
-      - {x: -5.3131843, y: 0.17766576}
+      - {x: 5.33, y: 0.305}
+      - {x: 5.13, y: 0.515}
+      - {x: 4.97, y: 0.635}
+      - {x: 4.77, y: 0.755}
+      - {x: 4.56, y: 0.85499996}
+      - {x: 4.4, y: 0.92499995}
+      - {x: 4.14, y: 1.035}
+      - {x: 3.8, y: 1.055}
+      - {x: -3.87, y: 1.055}
+      - {x: -4.13, y: 1.035}
+      - {x: -4.35, y: 0.945}
+      - {x: -4.56, y: 0.85499996}
+      - {x: -4.77, y: 0.755}
+      - {x: -4.97, y: 0.635}
+      - {x: -5.08, y: 0.555}
+      - {x: -5.29, y: 0.355}
+      - {x: -5.38, y: 0.24499999}
       - {x: -5.46, y: 0.055}
       - {x: -5.46, y: -0.13499999}
       - {x: -5.43, y: -0.285}
@@ -9020,27 +9197,6 @@ PolygonCollider2D:
       - {x: -3.84, y: -1.045}
       - {x: -3.6299999, y: -1.055}
       - {x: 3.61, y: -1.055}
---- !u!50 &1656417619
-Rigidbody2D:
-  serializedVersion: 4
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1656417614}
-  m_BodyType: 0
-  m_Simulated: 1
-  m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDrag: 0
-  m_AngularDrag: 0.05
-  m_GravityScale: 0
-  m_Material: {fileID: 0}
-  m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
-  m_Constraints: 7
 --- !u!1 &1706035164
 GameObject:
   m_ObjectHideFlags: 0
@@ -9504,6 +9660,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 589553255}
     m_Modifications:
+    - target: {fileID: -4894334970397727795, guid: 70aef51fe5676ba4b96b5ade6dd3ca47, type: 3}
+      propertyPath: hitsToBreak
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: -4894334970397727795, guid: 70aef51fe5676ba4b96b5ade6dd3ca47, type: 3}
+      propertyPath: brickbreakSound
+      value: 
+      objectReference: {fileID: 16873916}
     - target: {fileID: 9178608179195345122, guid: 70aef51fe5676ba4b96b5ade6dd3ca47, type: 3}
       propertyPath: m_Name
       value: bricks (12)
@@ -9628,6 +9792,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 589553255}
     m_Modifications:
+    - target: {fileID: -4894334970397727795, guid: 70aef51fe5676ba4b96b5ade6dd3ca47, type: 3}
+      propertyPath: hitsToBreak
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: -4894334970397727795, guid: 70aef51fe5676ba4b96b5ade6dd3ca47, type: 3}
+      propertyPath: brickbreakSound
+      value: 
+      objectReference: {fileID: 16873916}
     - target: {fileID: 9178608179195345122, guid: 70aef51fe5676ba4b96b5ade6dd3ca47, type: 3}
       propertyPath: m_Name
       value: bricks

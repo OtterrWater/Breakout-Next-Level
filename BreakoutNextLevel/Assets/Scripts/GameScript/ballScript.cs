@@ -9,7 +9,7 @@ public class ballScript : MonoBehaviour
     public Transform paddle, powerup;
     public float speed;
     public GameManager gm;
-    public AudioSource ballImplact1, ballImplact2;
+    public AudioSource ballImplact1, ballImplact2, brickbreakSound;
     //public Vector2 rotation;
 
     // Start is called before the first frame update
@@ -63,19 +63,28 @@ public class ballScript : MonoBehaviour
     {
         if (other.transform.CompareTag("brick"))
         {
-            int chance = Random.Range (1, 101);
-            if (chance < 101 && !isCreated && gm.lives < 3)
+            brickScript bs = other.gameObject.GetComponent<brickScript>();
+            if(bs.hitsToBreak > 1)
             {
-                Instantiate(powerup, other.transform.position, other.transform.rotation);
-                isCreated = true;
+                bs.BrickBroke();
+                brickbreakSound.Play();
             }
+            else
+            {
+                int chance = Random.Range(1, 101);
+                if (chance > 70 && !isCreated && gm.lives < 3)
+                {
+                    Instantiate(powerup, other.transform.position, other.transform.rotation);
+                    isCreated = true;
+                }
 
-            ballImplact1.Play();
-            ballImplact2.Play();
-            Destroy(other.gameObject);
+                ballImplact1.Play();
+                ballImplact2.Play();
+                Destroy(other.gameObject);
 
-            gm.UpdateScore(+1);
-            gm.UpdateBrickCount();
+                gm.UpdateScore(+1);
+                gm.UpdateBrickCount();
+            }
         }
     }
 }
