@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 9178608179195345127}
   - component: {fileID: 9178608179195345124}
   - component: {fileID: 9178608179195345126}
+  - component: {fileID: -4894334970397727795}
   m_Layer: 0
   m_Name: bricks
   m_TagString: brick
@@ -74,7 +75,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 1e40c1d6523791443bcde3bd09c3a295, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 83c6f7327c29d0b4c8da4e74b3309bc8, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -102,7 +103,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1.9777777, y: 0.6333333}
+    oldSize: {x: 1.9777777, y: 0.64}
     newSize: {x: 13.90625, y: 4.453125}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -111,3 +112,17 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.9777777, y: 0.6333333}
   m_EdgeRadius: 0
+--- !u!114 &-4894334970397727795
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9178608179195345122}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: df14ad4944cffcc46ba9789efd4dddd4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hitsToBreak: 0
+  hitSprite: {fileID: 21300000, guid: 96229a26ce93c1b479270a353b6e9d65, type: 3}
