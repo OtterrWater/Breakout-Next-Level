@@ -13,7 +13,7 @@ public class profileInfo : SavePrefs
     void Start()
     {
         LoadGame();
-        ProfileNameText.text = "John Doe";
+        ProfileNameText.text = PlayerPrefs.GetString("SavedUsername");
         CoinText.text = "Coins: "+ PlayerPrefs.GetInt("SavedCoins");
         SkinText.text = "Number of Skins: 00000";
     }
