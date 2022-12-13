@@ -14,16 +14,10 @@ public class SavePrefs : MonoBehaviour
     public TMP_InputField userInput;
     public Button submitButton;
     public GameObject userNamePanel;
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
 
-    // Update is called once per frame
-    void Update()
+    void Awake()
     {
-        
+        LoadGame();
     }
     public void getInputOnClickHandler()
     {
@@ -32,16 +26,11 @@ public class SavePrefs : MonoBehaviour
     public void CreateUsername()
     {
         PlayerPrefs.SetString("SavedUsername", userInput.text);
-        Debug.Log("Profile Created! Welcome "+userInput.text);
+        Debug.Log("Profile Created! Welcome " + userInput.text);
     }
-    public void CloseUserNamePanel()
-    {
-        userNamePanel.SetActive(false);
-        Debug.Log("UserNamePanel Closed");
-    }
+
     public void SaveGame()
     {
-       
         PlayerPrefs.SetInt("SavedCoins", coinsToSave);
         PlayerPrefs.SetInt("SavedSkins", skinsToSave);
         PlayerPrefs.SetInt("SavedLevels", levelsToSave);
@@ -56,10 +45,19 @@ public class SavePrefs : MonoBehaviour
             coinsToSave = PlayerPrefs.GetInt("SavedCoins");
             skinsToSave = PlayerPrefs.GetInt("SavedSkins");
             levelsToSave = PlayerPrefs.GetInt("SavedLevels");
-          //  Debug.Log("Game data loaded!");
+            //  Debug.Log("Game data loaded!");
+            if (PlayerPrefs.GetString("SavedUsername") == usernameToSave)
+            {
+                userNamePanel.SetActive(false);
+            }
+            else
+            {
+                userNamePanel.SetActive(true);
+            }
         }
         else
-           Debug.LogError("There is no save data!");
+            userNamePanel.SetActive(true);
+            //Debug.LogError("There is no save data!");
     }
 
 }
