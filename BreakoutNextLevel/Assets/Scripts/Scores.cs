@@ -9,7 +9,7 @@ public class Scores : MonoBehaviour
     public Text LevelsCompletedText;
     void Start()
     {
-        LevelsCompletedText.text = "Levels Completed: 00000";
+        LevelsCompletedText.text = "Levels Completed: ?? ????";
     }
     
     void Update()
