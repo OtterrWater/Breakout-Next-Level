@@ -6383,6 +6383,7 @@ GameObject:
   - component: {fileID: 1096451417}
   - component: {fileID: 1096451416}
   - component: {fileID: 1096451415}
+  - component: {fileID: 1096451419}
   m_Layer: 5
   m_Name: DeleteProfileBut
   m_TagString: Untagged
@@ -6484,9 +6485,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
-        m_MethodName: GiveUp
+      - m_Target: {fileID: 1881672045}
+        m_TargetAssemblyTypeName: SavePrefs, Assembly-CSharp
+        m_MethodName: ResetGame
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -6534,6 +6535,25 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1096451413}
   m_CullTransparentMesh: 1
+--- !u!114 &1096451419
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1096451413}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 233cdf491bd656e448af0ceda3eac390, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  coinsToSave: 0
+  skinsToSave: 0
+  levelsToSave: 0
+  usernameToSave: 
+  userInput: {fileID: 0}
+  submitButton: {fileID: 0}
+  userNamePanel: {fileID: 0}
 --- !u!1001 &1130701880
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -11521,6 +11541,7 @@ GameObject:
   - component: {fileID: 1881672042}
   - component: {fileID: 1881672044}
   - component: {fileID: 1881672043}
+  - component: {fileID: 1881672045}
   m_Layer: 5
   m_Name: areusurePanel
   m_TagString: Untagged
@@ -11592,6 +11613,25 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1881672041}
   m_CullTransparentMesh: 1
+--- !u!114 &1881672045
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1881672041}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 233cdf491bd656e448af0ceda3eac390, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  coinsToSave: 0
+  skinsToSave: 0
+  levelsToSave: 0
+  usernameToSave: 
+  userInput: {fileID: 0}
+  submitButton: {fileID: 0}
+  userNamePanel: {fileID: 0}
 --- !u!1 &1897767632
 GameObject:
   m_ObjectHideFlags: 0

@@ -59,5 +59,14 @@ public class SavePrefs : MonoBehaviour
             userNamePanel.SetActive(true);
             //Debug.LogError("There is no save data!");
     }
+    public void ResetGame()
+    {
+        PlayerPrefs.SetString("SavedUserName", "");
+        PlayerPrefs.SetInt("SavedCoins", 0);
+        PlayerPrefs.SetInt("SavedSkins", 0);
+        PlayerPrefs.SetInt("SavedLevels", 0);
+        Application.Quit();
+        Debug.Log("Profile Reset. Exiting...");
+    }
 
 }
