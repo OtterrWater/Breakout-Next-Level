@@ -596,9 +596,9 @@ MonoBehaviour:
   skinsToSave: 0
   levelsToSave: 0
   usernameToSave: 
-  userInput: {fileID: 1101379380}
-  submitButton: {fileID: 375145546}
-  userNamePanel: {fileID: 1323543736}
+  userInput: {fileID: 0}
+  submitButton: {fileID: 0}
+  userNamePanel: {fileID: 0}
   ProfileNameText: {fileID: 1759756169}
   CoinText: {fileID: 116272043}
   SkinText: {fileID: 70191027}
@@ -1701,6 +1701,7 @@ GameObject:
   - component: {fileID: 1676294227}
   - component: {fileID: 1676294226}
   - component: {fileID: 1676294229}
+  - component: {fileID: 1676294230}
   m_Layer: 0
   m_Name: Canvas
   m_TagString: Untagged
@@ -1894,6 +1895,28 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &1676294230
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1676294224}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bb43a3d5ba595f3478824eb2b547f29d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  coinsToSave: 0
+  skinsToSave: 0
+  levelsToSave: 0
+  usernameToSave: 
+  userInput: {fileID: 0}
+  submitButton: {fileID: 0}
+  userNamePanel: {fileID: 1323543736}
+  ProfileNameText: {fileID: 1759756169}
+  CoinText: {fileID: 116272043}
+  SkinText: {fileID: 0}
 --- !u!1 &1753605646
 GameObject:
   m_ObjectHideFlags: 0

@@ -19,7 +19,7 @@ public class profileInfo : SavePrefs
 
     void Update()
     {
-        LoadGame();
+        LoadGameData();
         if (Input.GetKeyDown(KeyCode.Escape))
         {
             SceneManager.LoadScene("MainMenu");
