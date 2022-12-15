@@ -9,10 +9,10 @@ public class LevelPicker : MonoBehaviour
     public Button[] levelButtons;
     void Start()
     {
-        int currentLevel = PlayerPrefs.GetInt("currentStateAt", 6);
+        int currentLevel = PlayerPrefs.GetInt("currentStateAt", 5);
         for(int i = 1; i < levelButtons.Length; i++)
         {
-            if (i + 6 > currentLevel)
+            if (i + 5 > currentLevel)
             {
                 levelButtons[i].interactable = false;
             }
