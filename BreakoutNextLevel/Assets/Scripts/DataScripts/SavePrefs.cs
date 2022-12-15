@@ -11,25 +11,11 @@ public class SavePrefs : MonoBehaviour
     public int skinsToSave;
     public int levelsToSave;
     public string usernameToSave;
-    //public TMP_InputField userInput;
-    //public Button submitButton;
-   // public GameObject userNamePanel;
 
     void Awake()
     {
         LoadGame();
     }
-    /*
-    public void getInputOnClickHandler()
-    {
-        Debug.Log("Your username is: " + userInput.text);
-    }
-    public void CreateUsername()
-    {
-        PlayerPrefs.SetString("SavedUsername", userInput.text);
-        Debug.Log("Profile Created! Welcome " + userInput.text);
-    }
-    */
 
     public void SaveGame()
     {
@@ -44,31 +30,6 @@ public class SavePrefs : MonoBehaviour
     public void LoadGame()
     {
         if (PlayerPrefs.HasKey("SavedInteger")|| PlayerPrefs.HasKey("SavedSkins") || PlayerPrefs.HasKey("SavedLevels") ||PlayerPrefs.HasKey("SavedUsername"))
-        {
-            usernameToSave = PlayerPrefs.GetString("SavedUsername");
-            coinsToSave = PlayerPrefs.GetInt("SavedCoins");
-            skinsToSave = PlayerPrefs.GetInt("SavedSkins");
-            levelsToSave = PlayerPrefs.GetInt("SavedLevels");
-            //  Debug.Log("Game data loaded!");
-            /*
-            if (PlayerPrefs.GetString("SavedUsername") == usernameToSave)
-            {
-                userNamePanel.SetActive(false);
-            }
-            else ((PlayerPrefs.GetString("SavedUsername") == usernameToSave))
-            {
-                userNamePanel.SetActive(true);
-            }
-            */
-        }
-        //else
-        //    userNamePanel.SetActive(true);
-            //Debug.LogError("There is no save data!");
-    }
-
-    public void LoadGameData()
-    {
-        if (PlayerPrefs.HasKey("SavedInteger") || PlayerPrefs.HasKey("SavedSkins") || PlayerPrefs.HasKey("SavedLevels") || PlayerPrefs.HasKey("SavedUsername"))
         {
             usernameToSave = PlayerPrefs.GetString("SavedUsername");
             coinsToSave = PlayerPrefs.GetInt("SavedCoins");

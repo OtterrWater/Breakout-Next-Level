@@ -14,12 +14,12 @@ public class profileInfo : SavePrefs
     {
         LoadGame();
         ProfileNameText.text = PlayerPrefs.GetString("SavedUsername");
-        CoinText.text = "Coins: "+ PlayerPrefs.GetInt("SavedCoins");
+        CoinText.text = "Coins: " + PlayerPrefs.GetInt("SavedCoins");
     }
 
     void Update()
     {
-        LoadGameData();
+        LoadGame();
         if (Input.GetKeyDown(KeyCode.Escape))
         {
             SceneManager.LoadScene("MainMenu");
