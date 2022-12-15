@@ -3,11 +3,15 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
+using TMPro;
 
 public class StartMenu : MonoBehaviour
 {
     public GameObject cogPanel;
     AsyncOperation loadingOperation;
+    public GameObject userNamePanel;
+    public TMP_InputField userInput;
+    public Button submitButton;
 
     public static bool CogOn = false;
     void Update()
@@ -27,6 +31,30 @@ public class StartMenu : MonoBehaviour
                 CogOn = true;
             }
         }
+    }
+    public void getInputOnClickHandler()
+    {
+        Debug.Log("Your username is: " + userInput.text);
+    }
+    public void CreateUsername()
+    {
+        PlayerPrefs.SetString("SavedUsername", userInput.text);
+        Debug.Log("Profile Created! Welcome " + userInput.text);
+    }
+    public void LoadCreatePanel()
+    {
+        if (PlayerPrefs.GetString("SavedUsername") != "")
+        {
+            userNamePanel.SetActive(false);
+        }
+        else
+            {
+            userNamePanel.SetActive(true);
+        }
+    }
+    void Awake()
+    {
+        LoadCreatePanel();
     }
 
     public void StartGame()

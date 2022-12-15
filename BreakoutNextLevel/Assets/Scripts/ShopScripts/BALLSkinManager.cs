@@ -52,4 +52,11 @@ public class BALLSkinManager : MonoBehaviour
         usingThisSkinButton = BALLskinInfoInShop.GetComponentInChildren<Button>();
         usingThisSkinButton.interactable = false;
     }
+    /*WIP
+    public void ResetBallSkins()
+    {
+        BALLskinsInShopPanels.Clear();
+        Debug.Log("Ball Skins Wiped");
+    }
+    */
 }

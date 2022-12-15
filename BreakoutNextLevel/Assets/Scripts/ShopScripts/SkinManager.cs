@@ -50,4 +50,11 @@ public class SkinManager : MonoBehaviour
         usingThisSkinButton = skinInfoInShop.GetComponentInChildren<Button>();
         usingThisSkinButton.interactable = false;
     }
+    /*WIP
+    public void ResetPaddleSkins()
+    {
+        skinsInShopPanels.Clear();
+        Debug.Log("Paddle Skins Wiped");
+    }
+    */
 }
