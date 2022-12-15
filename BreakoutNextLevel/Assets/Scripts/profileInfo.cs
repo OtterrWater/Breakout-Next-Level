@@ -15,11 +15,11 @@ public class profileInfo : SavePrefs
         LoadGame();
         ProfileNameText.text = PlayerPrefs.GetString("SavedUsername");
         CoinText.text = "Coins: "+ PlayerPrefs.GetInt("SavedCoins");
-        SkinText.text = "Number of Skins: 00000";
     }
 
     void Update()
     {
+        LoadGame();
         if (Input.GetKeyDown(KeyCode.Escape))
         {
             SceneManager.LoadScene("MainMenu");
